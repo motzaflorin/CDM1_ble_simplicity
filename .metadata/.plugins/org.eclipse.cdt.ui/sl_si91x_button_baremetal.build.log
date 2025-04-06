@@ -1,0 +1,62 @@
+16:20:46 **** Incremental Build of configuration GNU ARM v12.2.1 - Default for project sl_si91x_button_baremetal ****
+make -j22 all 
+Building file: ../button_baremetal.c
+Invoking: GNU ARM C Compiler
+arm-none-eabi-gcc -g -gdwarf-2 -mcpu=cortex-m4 -mthumb -std=c18 '-DSIWG917M111MGTBA=1' '-DSLI_SI917=1' '-DSLI_SI917B0=1' '-DSLI_SI91X_MCU_ENABLE_FLASH_BASED_EXECUTION=1' '-DSLI_SI91X_MCU_EXTERNAL_LDO_FOR_PSRAM=1' '-DSLI_SI91X_MCU_COMMON_FLASH_MODE=1' '-DSLI_SI91X_MCU_CONFIG_RADIO_BOARD_BASE_VER=1' '-DSLI_SI91X_MCU_CONFIG_RADIO_BOARD_VER2=1' '-DSL_BOARD_NAME="BRD4002A"' '-DSL_BOARD_REV="A07"' '-DCLOCK_ROMDRIVER_PRESENT=1' '-DULPSS_CLOCK_ROMDRIVER_PRESENT=1' '-DSL_SI91X_BOARD_INIT=1' '-DSRAM_BASE=0x0cUL' '-DSRAM_SIZE=0x2fc00UL' '-DSLI_CODE_CLASSIFICATION_DISABLE=1' '-DSLI_SI91X_MCU_ENABLE_IPMU_APIS=1' '-DCRC_ROMDRIVER_PRESENT=1' '-DDEBUG_ENABLE=1' '-DDEBUG_UART=1' '-DENABLE_DEBUG_MODULE=1' '-DSL_SI91X_SI917_RAM_MEM_CONFIG=1' '-DUDMA_ROMDRIVER_PRESENT=1' '-D__STATIC_INLINE=static inline' '-DSI917=1' '-DSLI_SI91X_MCU_INTERFACE=1' '-DTA_DEEP_SLEEP_COMMON_FLASH=1' '-DPLL_ROMDRIVER_PRESENT=1' '-DSL_COMPONENT_CATALOG_PRESENT=1' -I"C:\Users\florin.mota\SimplicityStudio\v5_workspace\sl_si91x_button_baremetal\config" -I"C:\Users\florin.mota\SimplicityStudio\v5_workspace\sl_si91x_button_baremetal\autogen" -I"C:\Users\florin.mota\SimplicityStudio\v5_workspace\sl_si91x_button_baremetal" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/cmsis_driver/CMSIS/Driver/Include" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/cmsis_driver" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/core/chip/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/board/silabs/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/core/config" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/core/common/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/unified_api/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/service/clock_manager/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/unified_peripheral_drivers/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/hardware_drivers/button/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/hardware_drivers/led/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/systemlevel/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//platform/CMSIS/Core/Include" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//platform/common/inc" -I"C:/Users/florin.mota/SimplicityStudio/SDKs/simplicity_sdk//platform/service/system/inc" -Os -Wall -Wextra -ffunction-sections -fdata-sections -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -Wall -Werror -mcpu=cortex-m4 -fno-lto --specs=nano.specs -c -fmessage-length=0 -MMD -MP -MF"button_baremetal.d" -MT"button_baremetal.o" -o "button_baremetal.o" "../button_baremetal.c"
+Finished building: ../button_baremetal.c
+ 
+Building target: sl_si91x_button_baremetal.axf
+Invoking: GNU ARM C Linker
+arm-none-eabi-gcc -g -gdwarf-2 -mcpu=cortex-m4 -mthumb -T "C:\Users\florin.mota\SimplicityStudio\v5_workspace\sl_si91x_button_baremetal\autogen\linkerfile_SoC.ld" -u _printf_float -Wl,--no-warn-rwx-segments -fno-lto -Xlinker --gc-sections -Xlinker -Map="sl_si91x_button_baremetal.map" -mfpu=fpv4-sp-d16 -mfloat-abi=softfp --specs=nano.specs -o sl_si91x_button_baremetal.axf -Wl,--start-group "./app.o" "./button_baremetal.o" "./main.o" "./autogen/sl_event_handler.o" "./autogen/sl_si91x_button_instances.o" "./autogen/sl_si91x_led_instances.o" "./simplicity_sdk_2024.12.2/platform/common/src/sl_assert.o" "./simplicity_sdk_2024.12.2/platform/common/src/sl_syscalls.o" "./simplicity_sdk_2024.12.2/platform/service/system/src/sl_system_init.o" "./simplicity_sdk_2024.12.2/platform/service/system/src/sl_system_process_action.o" "./wiseconnect3_sdk_3.4.1/components/board/silabs/src/rsi_board.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src/iPMU_prog/iPMU_dotc/ipmu_apis.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src/iPMU_prog/iPMU_dotc/rsi_system_config_917.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src/rsi_deepsleep_soc.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src/rsi_ps_ram_func.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src/startup_si91x.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src/system_si91x.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/common/src/rsi_debug.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/common/src/sl_si91x_stack_object_declare.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/common/src/syscalls.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/config/src/rsi_nvic_priorities_config.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/cmsis_driver/UDMA.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/cmsis_driver/USART.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/hardware_drivers/button/src/sl_si91x_button.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/hardware_drivers/led/src/sl_si91x_led.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/aux_reference_volt_config.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/clock_update.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/rsi_adc.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/rsi_crc.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/rsi_dac.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/rsi_egpio.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/rsi_opamp.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/rsi_udma.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/rsi_udma_wrapper.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src/rsi_usart.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/rom_driver/src/rsi_rom_table_si91x.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/service/clock_manager/src/sl_si91x_clock_manager.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src/rsi_bod.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src/rsi_ipmu.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src/rsi_pll.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src/rsi_rtc.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src/rsi_temp_sensor.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src/rsi_time_period.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src/rsi_ulpss_clk.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_api/src/sl_si91x_adc.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_api/src/sl_si91x_bjt_temperature_sensor.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_api/src/sl_si91x_dma.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_api/src/sl_si91x_driver_gpio.o" "./wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_peripheral_drivers/src/sl_si91x_peripheral_gpio.o" -lgcc -lnosys -lc -lm -Wl,--end-group -Wl,--start-group -lgcc -lc -lnosys -Wl,--end-group
+Finished building target: sl_si91x_button_baremetal.axf
+ 
+Building out file: sl_si91x_button_baremetal.out
+arm-none-eabi-objcopy "sl_si91x_button_baremetal.axf" "sl_si91x_button_baremetal.out"
+ 
+Building hex file: sl_si91x_button_baremetal.hex
+arm-none-eabi-objcopy -O ihex "sl_si91x_button_baremetal.axf" "sl_si91x_button_baremetal.hex"
+ 
+Building bin file: sl_si91x_button_baremetal.bin
+arm-none-eabi-objcopy -O binary "sl_si91x_button_baremetal.axf" "sl_si91x_button_baremetal.bin"
+ 
+Building s37 file: sl_si91x_button_baremetal.s37
+arm-none-eabi-objcopy -O srec "sl_si91x_button_baremetal.axf" "sl_si91x_button_baremetal.s37"
+ 
+Running size tool
+arm-none-eabi-size "sl_si91x_button_baremetal.axf" -A
+sl_si91x_button_baremetal.axf  :
+section               size        addr
+.text                41872   136323072
+.common_tcm_code       540   136364944
+.data                 2964          12
+.bss                  4000        2976
+.stack               12288        6976
+.heap               176320       19264
+.udma_addr0           1024      195584
+.udma_addr1            384   604380160
+.ARM.attributes         46           0
+.comment                69           0
+.debug_info        1171942           0
+.debug_abbrev        29407           0
+.debug_aranges        5416           0
+.debug_ranges         7984           0
+.debug_line         108698           0
+.debug_str          104253           0
+.debug_frame         18536           0
+.debug_loc           99531           0
+.debug_line_str        454           0
+Total              1785728
+
+
+ 
+"C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander\commander.exe" postbuild "C:\Users\florin.mota\SimplicityStudio\v5_workspace\sl_si91x_button_baremetal/sl_si91x_button_baremetal.slpb" --parameter build_dir:"C:\Users\florin.mota\SimplicityStudio\v5_workspace\sl_si91x_button_baremetal\GNU ARM v12.2.1 - Default"
+Parsing file C:\Users\florin.mota\SimplicityStudio\v5_workspace\sl_si91x_button_baremetal/sl_si91x_button_baremetal.slpb...
+Running task RPS create...
+Running task convert...
+Running task convert...
+Running task convert...
+DONE
+ 
+
+16:20:49 Build Finished. 0 errors, 0 warnings. (took 3s.813ms)
+

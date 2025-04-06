@@ -1,0 +1,74 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: ble_heart_rate_profile_soc
+label: ble_heart_rate_profile_soc
+description: |
+  This application demonstrates BLE heart rate profile
+category: Example|BLE
+filter:
+- name: Project Difficulty
+  value: [Beginner]
+- name: Wireless Technology
+  value: [BLE]
+package: ble
+quality: production
+readme:
+- {path: readme.md}
+- {path: readme.md}
+source:
+- {path: app.c}
+- {path: main.c}
+include:
+- path: .
+  file_list:
+  - {path: app.h}
+  - {path: ble_config.h}
+sdk: {id: simplicity_sdk, version: 2024.12.2}
+toolchain_settings:
+- {value: -Wall -Werror, option: gcc_compiler_option}
+component:
+- {from: wiseconnect3_sdk, id: SIWG917M111MGTBA}
+- {from: wiseconnect3_sdk, id: basic_network_config_manager}
+- {from: wiseconnect3_sdk, id: ble}
+- {from: wiseconnect3_sdk, id: brd4338a}
+- {from: wiseconnect3_sdk, id: network_manager}
+- {from: wiseconnect3_sdk, id: si91x_memory_default_config}
+- {from: wiseconnect3_sdk, id: sl_power_manager}
+- {from: wiseconnect3_sdk, id: sl_si91x_basic_buffers}
+- {from: wiseconnect3_sdk, id: sl_si91x_internal_stack}
+- {from: wiseconnect3_sdk, id: syscalls}
+- {from: wiseconnect3_sdk, id: wifi}
+- {from: wiseconnect3_sdk, id: wifi_resources}
+- {from: wiseconnect3_sdk, id: wireless_wakeup_ulp_component}
+- {from: wiseconnect3_sdk, id: wiseconnect3_common}
+- {id: brd4002a}
+- {id: freertos}
+- {id: freertos_heap_4}
+- {id: gatt_configuration}
+- {id: sl_system}
+other_file:
+- {path: resources/readme/ble_heart_rate_profile_soc_ncp.png}
+- {path: resources/readme/bleheartratedeviceadvertising.png}
+- {path: resources/readme/bleheartratedeviceconnected.png}
+- {path: resources/readme/bleheartratedevicegattservernotificationsenabled.png}
+- {path: resources/readme/bleheartratedevicegattserverreceiveddata.png}
+- {path: resources/readme/gattconfigurator1.png}
+- {path: resources/readme/gattconfigurator2.png}
+- {path: resources/readme/gattconfigurator3.png}
+- {path: resources/readme/bleheartrateadvertiser.png}
+- {path: resources/readme/bleheartratedevicegattserverconnection.png}
+- {path: resources/readme/output1.png}
+- {path: resources/readme/gattconfigurator4.png}
+define:
+- {name: SL_SI91X_PRINT_DBG_LOG}
+requires:
+- {name: device_needs_ram_execution}
+configuration:
+- {name: SL_BOARD_ENABLE_VCOM, value: '1'}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+sdk_extension:
+- {id: wiseconnect3_sdk, version: 3.4.1}
+post_build:
+- {path: ble_heart_rate_profile_soc.slpb}
+
