@@ -1,4 +1,4 @@
-00:08:39 **** Incremental Build of configuration GNU ARM v12.2.1 - Default for project ble_heart_rate_profile_soc ****
+08:54:31 **** Incremental Build of configuration GNU ARM v12.2.1 - Default for project ble_heart_rate_profile_soc ****
 make -j22 all 
 make[1]: Nothing to be done for 'main-build'.
 "C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander\commander.exe" postbuild "C:\Users\florin.mota\SimplicityStudio\v5_workspace\ble_heart_rate_profile_soc/ble_heart_rate_profile_soc.slpb" --parameter build_dir:"C:\Users\florin.mota\SimplicityStudio\v5_workspace\ble_heart_rate_profile_soc\GNU ARM v12.2.1 - Default"
@@ -10,5 +10,5 @@ Running task convert...
 DONE
  
 
-00:08:46 Build Finished. 0 errors, 0 warnings. (took 6s.881ms)
+08:54:35 Build Finished. 0 errors, 0 warnings. (took 3s.682ms)
 

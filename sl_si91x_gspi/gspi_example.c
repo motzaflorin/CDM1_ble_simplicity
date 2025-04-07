@@ -23,6 +23,8 @@
 #include "sl_si91x_ulp_timer_common_config.h"
 #include "Driver_SPI.h"
 #include "rsi_rom_clks.h"
+
+//#include "sl_si91x_gspi.h"
 /*******************************************************************************
  ***************************  Defines / Macros  ********************************
  ******************************************************************************/
@@ -43,6 +45,13 @@
 #define INITIAL_COUNT                7000      // Count configured at timer init
 #define SYNC_TIME                    5000      // Delay to sync master and slave
 #define RECEIVE_SYNC_TIME            500       // Delay to settle the slave after send
+
+/*******************************************************************************
+ ***************************  Defines / Macros for modified sdk funcitons  ********************************
+ ******************************************************************************/
+#define MAX_READ_SIZE             32000     // Maximum size for receiving data
+#define MIN_DATA_LENGTH           0         // Minimum data length
+
 /*******************************************************************************
  *************************** LOCAL VARIABLES   *******************************
  ******************************************************************************/
@@ -155,6 +164,50 @@ void gspi_example_init(void)
     current_mode = SL_GSPI_RECEIVE_DATA;
   } while (false);
 }
+
+/*******************************************************************************
+ * Function to receive data, with device acting as slave (avoid modifying SDK)
+ *
+ * @param none
+ * @return none
+// ******************************************************************************/
+
+
+sl_status_t sl_si91x_gspi_slave_receive_data(sl_gspi_handle_t gspi_handle, void *data, uint32_t data_length)
+{
+  sl_status_t status = 0;
+//  int32_t error_status;
+  do {
+    // To validate pointers, if the parameters is NULL, it returns an error code
+    if ((data == NULL) || (gspi_handle == NULL)) {
+      status = SL_STATUS_NULL_POINTER;
+      break;
+    }
+    // Validate the GSPI handle address, if incorrect returns error code
+//    if (!validate_gspi_handle(gspi_handle)) {
+//      status = SL_STATUS_INVALID_PARAMETER;
+//      break;
+//    }
+    // If data_length is not in range, it returns an error code
+    if ((data_length == MIN_DATA_LENGTH) || (data_length > MAX_READ_SIZE)) {
+      status = SL_STATUS_INVALID_PARAMETER;
+      break;
+    }
+    // It calls the API to enable to slave gpio.
+//    status = set_slave_gpio_state(gspi_handle, ENABLE);
+    if (status != SL_STATUS_OK) {
+      break;
+    }
+    // CMSIS API for receiving data is called and the arm error code returned from
+    // the API is converted to SL error code via convert_arm_to_sl_error_code function.
+    // It updates the data variable with the data received.
+    ((sl_gspi_driver_t *)gspi_handle)->Receive(data, data_length);
+//    status       = convert_arm_to_sl_error_code(error_status);
+  } while (false);
+  return status;
+}
+
+
 /*******************************************************************************
  * Function will run continuously in while loop
  ******************************************************************************/
@@ -168,7 +221,7 @@ void gspi_example_process_action(void)
     case SL_GSPI_TRANSFER_DATA:
       if (begin_transmission == true) {
         // Validation for executing the API only once
-        sl_si91x_gspi_set_slave_number(GSPI_SLAVE_0);
+//        sl_si91x_gspi_set_slave_number(GSPI_SLAVE_0);
         status = sl_si91x_gspi_transfer_data(gspi_driver_handle,
                                              gspi_data_out,
                                              gspi_data_in,
@@ -209,7 +262,7 @@ void gspi_example_process_action(void)
     case SL_GSPI_SEND_DATA:
       if (begin_transmission) {
         // Validation for executing the API only once
-        sl_si91x_gspi_set_slave_number(GSPI_SLAVE_0);
+//        sl_si91x_gspi_set_slave_number(GSPI_SLAVE_0);
         status =
           sl_si91x_gspi_send_data(gspi_driver_handle, gspi_data_out, sizeof(gspi_data_out) / gspi_division_factor);
         if (status != SL_STATUS_OK) {
@@ -241,9 +294,9 @@ void gspi_example_process_action(void)
       if (begin_transmission == true) {
         wait_for_sync(RECEIVE_SYNC_TIME);
         // Validation for executing the API only once
-        sl_si91x_gspi_set_slave_number(GSPI_SLAVE_0);
+//        sl_si91x_gspi_set_slave_number(GSPI_SLAVE_0);
         status =
-          sl_si91x_gspi_receive_data(gspi_driver_handle, gspi_data_in, sizeof(gspi_data_in) / gspi_division_factor);
+            sl_si91x_gspi_slave_receive_data(gspi_driver_handle, gspi_data_in, sizeof(gspi_data_in) / gspi_division_factor);
         if (status != SL_STATUS_OK) {
           // If it fails to execute the API, it will not execute rest of the things
           DEBUGOUT("sl_si91x_gspi_receive_data: Error Code : %lu \n", status);
@@ -251,12 +304,14 @@ void gspi_example_process_action(void)
           break;
         }
         DEBUGOUT("GSPI receive begin successfully \n");
+        DEBUGOUT("Data received is %s \n",(char *)gspi_data_in);
         begin_transmission = false;
         //Waiting till the receive is completed
       }
       if (transfer_complete) {
         // If DMA is enabled, it will wait until transfer_complete flag is set.
         transfer_complete = false;
+
         DEBUGOUT("GSPI receive completed \n");
 //        compare_loop_back_data();
         // At last, current mode is set to completed

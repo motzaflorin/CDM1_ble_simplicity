@@ -18,9 +18,9 @@
 #ifndef GSPI_EXAMPLE_H_
 #define GSPI_EXAMPLE_H_
 
-#define SL_USE_TRANSFER ENABLE
+#define SL_USE_TRANSFER DISABLE
 #define SL_USE_SEND     DISABLE
-#define SL_USE_RECEIVE  DISABLE
+#define SL_USE_RECEIVE  ENABLE
 
 // -----------------------------------------------------------------------------
 // Prototypes

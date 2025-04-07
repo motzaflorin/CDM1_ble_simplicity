@@ -447,7 +447,7 @@ static uint32_t rsi_ble_battery_add_new_serv(void)
 {
   uuid_t new_uuid                       = { 0 };
   rsi_ble_resp_add_serv_t new_serv_resp = { 0 };
-  uint8_t sensor_data                   = 5;
+//  uint8_t sensor_data                   = 5;
 //  uint8_t control_data                  = 0;
 
   //! adding new service
@@ -491,8 +491,8 @@ static uint32_t rsi_ble_battery_add_new_serv(void)
                            new_serv_resp.start_handle + 5,
                            new_uuid,
                            RSI_BLE_ATT_PROPERTY_READ,
-                           &sensor_data,
-                           sizeof(sensor_data));
+                           NULL,
+                           0);
 
 //  //! adding characteristic service attribute to the service
 //  new_uuid.size      = 2;
@@ -725,17 +725,23 @@ static void rsi_ble_on_gatt_write_event(uint16_t event_id, rsi_ble_event_write_t
   return;
 }
 ///*==============================================*/
-///**
-// * @fn         rsi_ble_on_gatt_write_event
-// * @brief      its invoked when write/notify/indication events are received.
-// * @param[in]  event_id, it indicates write/notification event id.
-// * @param[in]  rsi_ble_write, write event parameters.
-// * @return     none.
-// * @section description
-// * This callback function is invoked when write/notify/indication events are received
-// */
-//
-//ble_on_read_req_event
+/**
+ * @fn         ble_on_read_req_event
+ * @brief      its invoked when read/ events are received.
+ * @param[in]  event_id, it indicates read event id.
+ * @param[in]
+ * @return     none.
+ * @section description
+ * This callback function is invoked when write/notify/indication events are received
+ */
+
+static void ble_on_read_req_event(uint16_t event_id, rsi_ble_read_req_t *read_req)
+{
+  uint8_t sensor_read = 7;
+  printf("Read req for handle %d and event id %d\n", read_req->handle, event_id);
+
+  rsi_ble_set_local_att_value(read_req->handle, sizeof(sensor_read), &sensor_read);
+}
 /*==============================================*/
 /**
  * @fn         rsi_ble_profiles_list
