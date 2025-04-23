@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="pin_tool.siwg917m111mgtba" partId="mcu.arm.wfm.siwg917m111mgtba" contextId="com.silabs.sdk.stack.sisdk:2024.12.2._1576593201">
+  <mode name="DefaultMode">
+    <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
+    <property object="GPIO_10" propertyId="pin.name" value=""/>
+    <property object="PORTIO" propertyId="portio.ssi_master.enable.cs0_" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.ssi_master.enable.miso_data1" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.ssi_master.enable.mosi_data0" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.ssi_master.enable.sck_" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.ssi_master.location.cs0_" value="10"/>
+    <property object="PORTIO" propertyId="portio.ssi_master.location.miso_data1" value="4"/>
+    <property object="PORTIO" propertyId="portio.ssi_master.location.mosi_data0" value="1"/>
+    <property object="PORTIO" propertyId="portio.ssi_master.location.sck_" value="7"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.location.miso_" value="7"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.location.mosi_" value="3"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.location.sck_" value="11"/>
+    <property object="SSI_MASTER" propertyId="ABModule.selectedRequirement" value="ssi_master%T%SL_SSI_MASTER%T%sl_si91x_ssi_primary_config.h"/>
+    <property object="SSI_MASTER" propertyId="ABPeripheral.included" value="true"/>
+    <property object="SSI_SLAVE" propertyId="ABModule.selectedRequirement" value="ssi_slave%T%SL_SSI_SLAVE%T%sl_si91x_ssi_secondary_config.h"/>
+    <property object="SSI_SLAVE" propertyId="ABPeripheral.included" value="true"/>
+  </mode>
+  <modeTransition>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.target" value="DefaultMode"/>
+  </modeTransition>
+</device:XMLDevice>

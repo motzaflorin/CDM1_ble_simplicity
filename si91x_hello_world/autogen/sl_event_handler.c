@@ -1,0 +1,47 @@
+#include "sl_event_handler.h"
+
+#include "system_si91x.h"
+#include "sl_si91x_clock_manager.h"
+#include "rsi_board.h"
+#include "rsi_debug.h"
+
+void sl_platform_init(void)
+{
+  SystemCoreClockUpdate();
+  sl_si91x_clock_manager_init();
+  RSI_Board_Init();
+  DEBUGINIT();
+}
+
+void sl_driver_init(void)
+{
+}
+
+void sl_service_init(void)
+{
+}
+
+void sl_stack_init(void)
+{
+}
+
+void sl_internal_app_init(void)
+{
+}
+
+void sl_platform_process_action(void)
+{
+}
+
+void sl_service_process_action(void)
+{
+}
+
+void sl_stack_process_action(void)
+{
+}
+
+void sl_internal_app_process_action(void)
+{
+}
+

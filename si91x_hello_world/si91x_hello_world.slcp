@@ -1,0 +1,43 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: si91x_hello_world
+label: si91x_hello_world
+description: "This application demonstrates how to use hello world example that can\
+  \ be used as a starting point \nto add components and functionality to the Si91x\
+  \ SoC.\n"
+category: example|peripheral
+package: platform
+quality: production
+readme:
+- {path: readme.md}
+- {path: readme.md}
+source:
+- {path: app.c}
+- {path: main.c}
+include:
+- path: .
+  file_list:
+  - {path: app.h}
+sdk: {id: simplicity_sdk, version: 2024.12.2}
+toolchain_settings:
+- {value: -Wall -Werror, option: gcc_compiler_option}
+component:
+- {from: wiseconnect3_sdk, id: SIWG917M111MGTBA}
+- {from: wiseconnect3_sdk, id: brd4338a}
+- {from: wiseconnect3_sdk, id: si91x_memory_default_config}
+- instance: [primary]
+  from: wiseconnect3_sdk
+  id: sl_ssi_instance
+- {from: wiseconnect3_sdk, id: syscalls}
+- {id: brd4002a}
+- {id: sl_system}
+other_file:
+- {path: resources/readme/setupdiagram.png}
+- {path: resources/readme/outputConsole.png}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+sdk_extension:
+- {id: wiseconnect3_sdk, version: 3.4.1}
+post_build:
+- {path: si91x_hello_world.slpb}
+
