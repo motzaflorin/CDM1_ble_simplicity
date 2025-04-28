@@ -39,6 +39,8 @@ extern "C" {
 
 #include "sl_si91x_ssi_primary_config.h"
 
+#include "sl_si91x_ssi_secondary_config.h"
+
 
 
 sl_ssi_control_config_t ssi_primary_configuration = {
@@ -47,6 +49,14 @@ sl_ssi_control_config_t ssi_primary_configuration = {
     .clock_mode = SL_SSI_PRIMARY_CLOCK_MODE,
     .receive_sample_delay = SL_SSI_PRIMARY_RECEIVE_SAMPLE_DELAY,
     .baud_rate = SL_SSI_PRIMARY_BAUD
+};
+
+sl_ssi_control_config_t ssi_secondary_configuration = {
+    .bit_width = SL_SSI_SECONDARY_BIT_WIDTH,
+    .device_mode = SL_SSI_SECONDARY_DEVICE_MODE,
+    .clock_mode = SL_SSI_SECONDARY_CLOCK_MODE,
+    .receive_sample_delay = SL_SSI_SECONDARY_RECEIVE_SAMPLE_DELAY,
+    .baud_rate = SL_SSI_SECONDARY_BAUD
 };
 
 

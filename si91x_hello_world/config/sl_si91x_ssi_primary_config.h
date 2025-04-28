@@ -78,48 +78,48 @@ extern "C"
 #define SL_SSI_MASTER_PERIPHERAL                 SSI_MASTER
 #endif
 
-// SSI_MASTER MOSI_DATA0 on GPIO_26
+// SSI_MASTER MOSI_DATA0 on GPIO_11
 #ifndef SL_SSI_MASTER_MOSI_DATA0_PORT           
 #define SL_SSI_MASTER_MOSI_DATA0_PORT            HP
 #endif
 #ifndef SL_SSI_MASTER_MOSI_DATA0_PIN            
-#define SL_SSI_MASTER_MOSI_DATA0_PIN             26
+#define SL_SSI_MASTER_MOSI_DATA0_PIN             11
 #endif
 #ifndef SL_SSI_MASTER_DATA0_LOC                 
-#define SL_SSI_MASTER_DATA0_LOC                  1
+#define SL_SSI_MASTER_DATA0_LOC                  0
 #endif
 
-// SSI_MASTER MISO_DATA1 on GPIO_27
+// SSI_MASTER MISO_DATA1 on GPIO_12
 #ifndef SL_SSI_MASTER_MISO_DATA1_PORT           
 #define SL_SSI_MASTER_MISO_DATA1_PORT            HP
 #endif
 #ifndef SL_SSI_MASTER_MISO_DATA1_PIN            
-#define SL_SSI_MASTER_MISO_DATA1_PIN             27
+#define SL_SSI_MASTER_MISO_DATA1_PIN             12
 #endif
 #ifndef SL_SSI_MASTER_DATA1_LOC                 
-#define SL_SSI_MASTER_DATA1_LOC                  4
+#define SL_SSI_MASTER_DATA1_LOC                  3
 #endif
 
-// SSI_MASTER SCK_ on GPIO_25
+// SSI_MASTER SCK_ on GPIO_8
 #ifndef SL_SSI_MASTER_SCK__PORT                 
 #define SL_SSI_MASTER_SCK__PORT                  HP
 #endif
 #ifndef SL_SSI_MASTER_SCK__PIN                  
-#define SL_SSI_MASTER_SCK__PIN                   25
+#define SL_SSI_MASTER_SCK__PIN                   8
 #endif
 #ifndef SL_SSI_MASTER_SCK_LOC                   
-#define SL_SSI_MASTER_SCK_LOC                    7
+#define SL_SSI_MASTER_SCK_LOC                    6
 #endif
 
-// SSI_MASTER CS0_ on GPIO_28
+// SSI_MASTER CS0_ on GPIO_9
 #ifndef SL_SSI_MASTER_CS0__PORT                 
 #define SL_SSI_MASTER_CS0__PORT                  HP
 #endif
 #ifndef SL_SSI_MASTER_CS0__PIN                  
-#define SL_SSI_MASTER_CS0__PIN                   28
+#define SL_SSI_MASTER_CS0__PIN                   9
 #endif
 #ifndef SL_SSI_MASTER_CS0_LOC                   
-#define SL_SSI_MASTER_CS0_LOC                    10
+#define SL_SSI_MASTER_CS0_LOC                    9
 #endif
 // [SSI_MASTER_SL_SSI_MASTER]$
 // <<< sl:end pin_tool >>>

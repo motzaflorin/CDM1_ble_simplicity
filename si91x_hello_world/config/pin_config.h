@@ -20,53 +20,97 @@
 // [ULP_I2C]$
 
 // $[SSI_MASTER]
-// SSI_MASTER MOSI_DATA0 on GPIO_26
+// SSI_MASTER MOSI_DATA0 on GPIO_11
 #ifndef SSI_MASTER_MOSI_DATA0_PORT              
 #define SSI_MASTER_MOSI_DATA0_PORT               HP
 #endif
 #ifndef SSI_MASTER_MOSI_DATA0_PIN               
-#define SSI_MASTER_MOSI_DATA0_PIN                26
+#define SSI_MASTER_MOSI_DATA0_PIN                11
 #endif
 #ifndef SSI_MASTER_DATA0_LOC                    
-#define SSI_MASTER_DATA0_LOC                     1
+#define SSI_MASTER_DATA0_LOC                     0
 #endif
 
-// SSI_MASTER MISO_DATA1 on GPIO_27
+// SSI_MASTER MISO_DATA1 on GPIO_12
 #ifndef SSI_MASTER_MISO_DATA1_PORT              
 #define SSI_MASTER_MISO_DATA1_PORT               HP
 #endif
 #ifndef SSI_MASTER_MISO_DATA1_PIN               
-#define SSI_MASTER_MISO_DATA1_PIN                27
+#define SSI_MASTER_MISO_DATA1_PIN                12
 #endif
 #ifndef SSI_MASTER_DATA1_LOC                    
-#define SSI_MASTER_DATA1_LOC                     4
+#define SSI_MASTER_DATA1_LOC                     3
 #endif
 
-// SSI_MASTER SCK_ on GPIO_25
+// SSI_MASTER SCK_ on GPIO_8
 #ifndef SSI_MASTER_SCK__PORT                    
 #define SSI_MASTER_SCK__PORT                     HP
 #endif
 #ifndef SSI_MASTER_SCK__PIN                     
-#define SSI_MASTER_SCK__PIN                      25
+#define SSI_MASTER_SCK__PIN                      8
 #endif
 #ifndef SSI_MASTER_SCK_LOC                      
-#define SSI_MASTER_SCK_LOC                       7
+#define SSI_MASTER_SCK_LOC                       6
 #endif
 
-// SSI_MASTER CS0_ on GPIO_28
+// SSI_MASTER CS0_ on GPIO_9
 #ifndef SSI_MASTER_CS0__PORT                    
 #define SSI_MASTER_CS0__PORT                     HP
 #endif
 #ifndef SSI_MASTER_CS0__PIN                     
-#define SSI_MASTER_CS0__PIN                      28
+#define SSI_MASTER_CS0__PIN                      9
 #endif
 #ifndef SSI_MASTER_CS0_LOC                      
-#define SSI_MASTER_CS0_LOC                       10
+#define SSI_MASTER_CS0_LOC                       9
 #endif
 
 // [SSI_MASTER]$
 
 // $[SSI_SLAVE]
+// SSI_SLAVE MOSI_ on GPIO_27
+#ifndef SSI_SLAVE_MOSI__PORT                    
+#define SSI_SLAVE_MOSI__PORT                     HP
+#endif
+#ifndef SSI_SLAVE_MOSI__PIN                     
+#define SSI_SLAVE_MOSI__PIN                      27
+#endif
+#ifndef SSI_SLAVE_MOSI_LOC                      
+#define SSI_SLAVE_MOSI_LOC                       2
+#endif
+
+// SSI_SLAVE MISO_ on GPIO_28
+#ifndef SSI_SLAVE_MISO__PORT                    
+#define SSI_SLAVE_MISO__PORT                     HP
+#endif
+#ifndef SSI_SLAVE_MISO__PIN                     
+#define SSI_SLAVE_MISO__PIN                      28
+#endif
+#ifndef SSI_SLAVE_MISO_LOC                      
+#define SSI_SLAVE_MISO_LOC                       6
+#endif
+
+// SSI_SLAVE SCK_ on GPIO_26
+#ifndef SSI_SLAVE_SCK__PORT                     
+#define SSI_SLAVE_SCK__PORT                      HP
+#endif
+#ifndef SSI_SLAVE_SCK__PIN                      
+#define SSI_SLAVE_SCK__PIN                       26
+#endif
+#ifndef SSI_SLAVE_SCK_LOC                       
+#define SSI_SLAVE_SCK_LOC                        10
+#endif
+
+// SSI_SLAVE CS0_ on GPIO_25
+#ifndef SSI_SLAVE_CS0__PORT                     
+#define SSI_SLAVE_CS0__PORT                      HP
+#endif
+#ifndef SSI_SLAVE_CS0__PIN                      
+#define SSI_SLAVE_CS0__PIN                       25
+#endif
+#ifndef SSI_SLAVE_CS0_LOC                       
+#define SSI_SLAVE_CS0_LOC                        14
+#endif
+
 // [SSI_SLAVE]$
 
 // $[ULP_SSI]

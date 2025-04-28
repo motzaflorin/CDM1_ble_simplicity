@@ -7,68 +7,33 @@
 #include "sl_si91x_ssi_primary_config.h"
 
 
+
+#include "sl_sleeptimer.h"
+
 static   void my_ssi_event_cb(uint32_t event);
-
-void init_spi_slave(void) {
-  printf("Initialiaze SPI from SSI\n");
-  sl_status_t status;
-  sl_ssi_handle_t ssi_handle = 0;
-  const char *data_out = "Some data";
-  char data_in[10];
-
-  // Configure as SPI master first
-  status = sl_si91x_ssi_init(SL_SSI_MASTER_ACTIVE, &ssi_handle);
-  if (status != SL_STATUS_OK) {
-    printf("Init Failed\n");
-  }
-
-  // set power and config
-  status = sl_si91x_ssi_set_configuration(
-      ssi_handle,
-    &ssi_primary_configuration,  // structure from sl_ssi_instances.h
-    SSI_SLAVE_0                 // as of now use 0
-  );
-  if (status != SL_STATUS_OK) {
-      printf("Set Config Failed\n");
-  }
+void arm_spi_slave(void);
 
 
-  sl_si91x_ssi_register_event_callback(ssi_handle, (sl_ssi_signal_event_t) my_ssi_event_cb);
+uint8_t data_in[10] = {0xaa};
+uint8_t data_out[10] = {0xcc};
+sl_ssi_handle_t ssi_handle = 0;
+volatile bool transfer_done = false;
 
-// TRANSFER DATA
-  RSI_SPI_SetSlaveSelectNumber(0);  // Use the correct CS number for your board
-  status =  sl_si91x_ssi_transfer_data(ssi_handle,
-                                         (const void*)data_out,
-                                         (void *) data_in,
-                                         strlen(data_out));
-  if (status != SL_STATUS_OK) {
-         printf("Transfer Failed \%ld\n", status);
-     }
-
-//  printf("Data to send: %s\r\n",data_out);
-  printf("\n\n");
-  printf("Data received: %s\n\r",data_in);
-
-
-
-
-// SEND DATA
-// sl_si91x_ssi_send_data(ssi_handle, (const void*)data_out, strlen(data_out));
-// if (status != SL_STATUS_OK) {
-//         printf("SEND Failed \%ld\n", status);
-//     }
-// else {
-//       printf("Data sent: %s\r\n",data_out);
-//   }
-
-}
 
 // callback register
  static void my_ssi_event_cb(uint32_t event)
   {
     if (event & ARM_SPI_EVENT_TRANSFER_COMPLETE) {
-//      uint32_t transfer_done = true;
-      printf("transfer done\n");
+      printf("transfer done\r\n");
+      for(uint8_t i = 0; i < sizeof(data_in) / sizeof(data_in[0]); i++)
+        {
+          printf("Data received: %x\r\n",data_in[i]);
+          data_in[i] = 0;
+        }
+      transfer_done = true;
+
+      read_spi();
+//      send_spi();
     }
 
     if (event & ARM_SPI_EVENT_DATA_LOST) {
@@ -79,3 +44,70 @@ void init_spi_slave(void) {
       // Handle mode fault
     }
   }
+
+
+ // slave mode
+
+ void init_spi_slave(void)
+ {
+   printf("Initialiaze SPI SLAVE from SSI\r\n");
+   sl_status_t status;
+
+//   const char *data_out = "Some data";
+
+//   uint32_t length
+
+   // Configure as SPI SLAVE
+   status = sl_si91x_ssi_init(SL_SSI_SLAVE_ACTIVE, &ssi_handle);
+   if (status != SL_STATUS_OK) {
+     printf("Init Failed\n");
+   }
+
+   // set power and config
+   status = sl_si91x_ssi_set_configuration(
+       ssi_handle,
+     &ssi_secondary_configuration,  // structure from sl_ssi_instances.h
+     SSI_SLAVE_0                 // as of now use 0
+   );
+   if (status != SL_STATUS_OK) {
+       printf("Set Config Failed\r\\n");
+   }
+
+
+   sl_si91x_ssi_register_event_callback(ssi_handle, (sl_ssi_signal_event_t) my_ssi_event_cb);
+
+////  TRANSFER DATA
+   RSI_SPI_SetSlaveSelectNumber(0);  // Use the correct CS number - by default it uses some multislave config option
+
+   // Initial slave arm to receive data before master sends anything
+//   arm_spi_slave();  // prepare for next transaction
+   read_spi();
+//   send_spi();
+
+ }
+void read_spi()
+{
+  sl_status_t status;
+  status = sl_si91x_ssi_receive_data(ssi_handle, (void *) data_in, sizeof(data_in));
+  if (status != SL_STATUS_OK) {
+            printf("RECEIVE Failed \%ld\r\n", status);
+        }
+}
+
+void arm_spi_slave()
+{
+  sl_status_t status;
+  // Arm the slave for full-duplex transfer
+  status = sl_si91x_ssi_transfer_data(ssi_handle, data_out, data_in, sizeof(data_in));
+  if (status != SL_STATUS_OK) {
+      printf("TRANSFER arm failed: %ld\r\n", status);
+  }
+}
+void send_spi()
+{
+  sl_status_t status;
+  status = sl_si91x_ssi_send_data(ssi_handle, (void *) data_out, sizeof(data_out));
+  if (status != SL_STATUS_OK) {
+            printf("SEND Failed \%ld\r\n", status);
+        }
+}

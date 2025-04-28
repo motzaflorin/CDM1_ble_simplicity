@@ -18,6 +18,7 @@
 #include "sl_system_init.h"
 #include "app.h"
 #include "spi_app_layer.h"
+#include "button_baremetal.h"
 #if defined(SL_CATALOG_KERNEL_PRESENT)
 #include "sl_system_kernel.h"
 #else // SL_CATALOG_KERNEL_PRESENT
@@ -34,6 +35,7 @@ int main(void)
   // Initialize the application. For example, create periodic timer(s) or
   // task(s) if the kernel is present.
   app_init();
+//  init_spi_master();
   init_spi_slave();
 
 #if defined(SL_CATALOG_KERNEL_PRESENT)

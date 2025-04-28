@@ -3,21 +3,27 @@
   <mode name="DefaultMode">
     <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
     <property object="GPIO_10" propertyId="pin.name" value=""/>
+    <property object="GPIO_25" propertyId="pin.name" value=""/>
     <property object="PORTIO" propertyId="portio.ssi_master.enable.cs0_" value="Enabled"/>
     <property object="PORTIO" propertyId="portio.ssi_master.enable.miso_data1" value="Enabled"/>
     <property object="PORTIO" propertyId="portio.ssi_master.enable.mosi_data0" value="Enabled"/>
     <property object="PORTIO" propertyId="portio.ssi_master.enable.sck_" value="Enabled"/>
-    <property object="PORTIO" propertyId="portio.ssi_master.location.cs0_" value="10"/>
-    <property object="PORTIO" propertyId="portio.ssi_master.location.miso_data1" value="4"/>
-    <property object="PORTIO" propertyId="portio.ssi_master.location.mosi_data0" value="1"/>
-    <property object="PORTIO" propertyId="portio.ssi_master.location.sck_" value="7"/>
-    <property object="PORTIO" propertyId="portio.ssi_slave.location.miso_" value="7"/>
-    <property object="PORTIO" propertyId="portio.ssi_slave.location.mosi_" value="3"/>
-    <property object="PORTIO" propertyId="portio.ssi_slave.location.sck_" value="11"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.enable.cs0_" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.enable.miso_" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.enable.mosi_" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.enable.sck_" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.location.cs0_" value="14"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.location.miso_" value="6"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.location.mosi_" value="2"/>
+    <property object="PORTIO" propertyId="portio.ssi_slave.location.sck_" value="10"/>
     <property object="SSI_MASTER" propertyId="ABModule.selectedRequirement" value="ssi_master%T%SL_SSI_MASTER%T%sl_si91x_ssi_primary_config.h"/>
     <property object="SSI_MASTER" propertyId="ABPeripheral.included" value="true"/>
     <property object="SSI_SLAVE" propertyId="ABModule.selectedRequirement" value="ssi_slave%T%SL_SSI_SLAVE%T%sl_si91x_ssi_secondary_config.h"/>
     <property object="SSI_SLAVE" propertyId="ABPeripheral.included" value="true"/>
+    <property object="ULP_GPIO_2" propertyId="ABModule.selectedRequirement" value="gpio%T%SL_SI91X_LED_0%T%sl_si91x_led_init_led0_config.h"/>
+    <property object="ULP_GPIO_2" propertyId="pin.reserve" value="Reserved"/>
+    <property object="UULP_VBAT_GPIO_2" propertyId="ABModule.selectedRequirement" value="gpio%T%SL_SI91X_BUTTON_0%T%sl_si91x_button_init_btn0_config.h"/>
+    <property object="UULP_VBAT_GPIO_2" propertyId="pin.reserve" value="Reserved"/>
   </mode>
   <modeTransition>
     <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>

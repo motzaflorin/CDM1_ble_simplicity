@@ -38,6 +38,8 @@ extern "C" {
 
 #include "sl_si91x_ssi_primary_common_config.h"
 
+#include "sl_si91x_ssi_secondary_common_config.h"
+
 
 #ifdef __cplusplus
 }
