@@ -71,7 +71,8 @@ wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_api/sr
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\cmsis_driver\cmsis\driver\include\driver_i2c.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\cmsis_driver\spi.h \
  C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\autogen/sl_ssi_common_config.h \
- C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_primary_common_config.h
+ C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_primary_common_config.h \
+ C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_secondary_common_config.h
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\unified_api\inc\sl_si91x_bjt_temperature_sensor.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\unified_api\inc\sl_si91x_adc.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
@@ -144,3 +145,4 @@ c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\cmsis_driver\spi.h:
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\autogen/sl_ssi_common_config.h:
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_primary_common_config.h:
+C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_secondary_common_config.h:

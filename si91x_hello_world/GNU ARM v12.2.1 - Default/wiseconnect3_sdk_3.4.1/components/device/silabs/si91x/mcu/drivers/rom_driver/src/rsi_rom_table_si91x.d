@@ -61,7 +61,8 @@ wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/rom_driver/src
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\cmsis_driver\cmsis\driver\include\driver_i2c.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\cmsis_driver\spi.h \
  C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\autogen/sl_ssi_common_config.h \
- C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_primary_common_config.h
+ C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_primary_common_config.h \
+ C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_secondary_common_config.h
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\core\config\rsi_ccp_user_config.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\rom_driver\inc\rsi_rom_table_si91x.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\core\chip\inc\rsi_error.h:
@@ -124,3 +125,4 @@ c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\cmsis_driver\spi.h:
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\autogen/sl_ssi_common_config.h:
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_primary_common_config.h:
+C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_secondary_common_config.h:

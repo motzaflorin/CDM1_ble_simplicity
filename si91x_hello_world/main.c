@@ -14,6 +14,7 @@
  * sections of the MSLA applicable to Source Code.
  *
  ******************************************************************************/
+
 #include "sl_component_catalog.h"
 #include "sl_system_init.h"
 #include "app.h"
@@ -24,6 +25,12 @@
 #else // SL_CATALOG_KERNEL_PRESENT
 #include "sl_system_process_action.h"
 #endif // SL_CATALOG_KERNEL_PRESENT
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include "spi_sync.h"
+
+
 
 int main(void)
 {
@@ -36,7 +43,7 @@ int main(void)
   // task(s) if the kernel is present.
   app_init();
 //  init_spi_master();
-  init_spi_slave();
+//  init_spi_slave();
 
 #if defined(SL_CATALOG_KERNEL_PRESENT)
   // Start the kernel, Task(s) created in app_init() will start running.

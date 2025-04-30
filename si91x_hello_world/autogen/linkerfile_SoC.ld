@@ -48,10 +48,10 @@ SECTIONS
 	{
 		KEEP(*(.isr_vector))
 		. = ALIGN(32);
-		  *(EXCLUDE_FILE(*UDMA.o).text*)        
+		  *(EXCLUDE_FILE(*UDMA.o *tasks.o).text*)        
 			 KEEP(*(.init))
 			 KEEP(*(.fini))
-    	
+		
 				
         	     	  	
 
@@ -106,6 +106,8 @@ SECTIONS
 		_sdata = __data_start__;
 		*(.data*)
 		*UDMA.o(.text*)
+		*tasks.o(.text*)
+		
 		
 		
 		/* ipmu calibration data */

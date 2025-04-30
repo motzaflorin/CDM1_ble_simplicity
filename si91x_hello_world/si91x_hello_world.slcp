@@ -36,6 +36,7 @@ component:
 - {from: wiseconnect3_sdk, id: sleeptimer_si91x}
 - {from: wiseconnect3_sdk, id: syscalls}
 - {id: brd4002a}
+- {id: freertos_kernel_cortexm}
 - {id: sl_system}
 other_file:
 - {path: resources/readme/setupdiagram.png}

@@ -16,13 +16,35 @@
  ******************************************************************************/
 #include "app.h"
 #include <stdio.h>
+#include <stdint.h>
+#include "FreeRTOS.h"
+#include "semphr.h"
+#include "task.h"
+#include "spi_app_layer.h"
+#include "gpio_example.h"
 
 /*******************************************************************************
  * Initialize application.
  ******************************************************************************/
+
+SemaphoreHandle_t spi_rx_sem;
+
 void app_init(void)
 {
+  // =========== GPIO INIT =============
+  gpio_example_init();
+  //===================
   printf("Hello World!\r\n");
+  // Semaphore and task created for SPI 0 latency
+  spi_rx_sem = xSemaphoreCreateBinary();
+  if (!spi_rx_sem) {
+      printf("Failed to create SPI RX semaphore\r\n");
+      while (1);
+  }
+
+  xTaskCreate(spi_rx_task, "SPI_RX", SPI_RX_TASK_STACK_SIZE, NULL, SPI_RX_TASK_PRIORITY, NULL);
+
+  init_spi_slave();  // Start SPI and arm first RX
 }
 
 /*******************************************************************************
@@ -30,4 +52,7 @@ void app_init(void)
  ******************************************************************************/
 void app_process_action(void)
 {
+
 }
+
+

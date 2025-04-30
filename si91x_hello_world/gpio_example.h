@@ -1,6 +1,6 @@
 /***************************************************************************/ /**
- * @file app.h
- * @brief Top level application functions
+ * @file gpio_example.h
+ * @brief gpio example
  *******************************************************************************
  * # License
  * <b>Copyright 2023 Silicon Laboratories Inc. www.silabs.com</b>
@@ -14,24 +14,25 @@
  * sections of the MSLA applicable to Source Code.
  *
  ******************************************************************************/
-#ifndef APP_H
-#define APP_H
 
-#include <stdint.h>
-#define RING_BUF_SIZE 128
-#define SPI_RX_TASK_STACK_SIZE 512 // words
-#define SPI_RX_TASK_PRIORITY    5 //
+#ifndef GPIO_EXAMPLE_H_
+#define GPIO_EXAMPLE_H_
 
-extern volatile uint16_t ring_head, ring_tail;
+// -----------------------------------------------------------------------------
+// Prototypes
+/***************************************************************************/ /**
+ * GPIO example initialization function. It initializes HP/ULP clock, pin mode,
+ * direction and configure pin and group interrupts
+ * @param none
+ * @return none
+ ******************************************************************************/
+void gpio_example_init(void);
 
 /***************************************************************************/ /**
- * Initialize application.
+ * Function will run continuously in while loop and led toggles for every 1sec
+ * @param none
+ * @return none
  ******************************************************************************/
-void app_init(void);
+void gpio_example_process_action(void);
 
-/***************************************************************************/ /**
- * App ticking function.
- ******************************************************************************/
-void app_process_action(void);
-
-#endif // APP_H
+#endif /* GPIO_EXAMPLE_H_ */

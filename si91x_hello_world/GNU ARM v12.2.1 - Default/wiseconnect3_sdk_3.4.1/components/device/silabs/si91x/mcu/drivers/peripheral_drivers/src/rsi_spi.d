@@ -35,6 +35,7 @@ wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_dri
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\core\chip\inc\rsi_ccp_common.h \
  C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\autogen/sl_ssi_common_config.h \
  C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_primary_common_config.h \
+ C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_secondary_common_config.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\rom_driver\inc\rsi_rom_egpio.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\rom_driver\inc\rsi_packing.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\peripheral_drivers\inc\rsi_egpio.h \
@@ -115,6 +116,7 @@ c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\core\chip\inc\rsi_ccp_common.h:
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\autogen/sl_ssi_common_config.h:
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_primary_common_config.h:
+C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_hello_world\config/sl_si91x_ssi_secondary_common_config.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\rom_driver\inc\rsi_rom_egpio.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\rom_driver\inc\rsi_packing.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\peripheral_drivers\inc\rsi_egpio.h:

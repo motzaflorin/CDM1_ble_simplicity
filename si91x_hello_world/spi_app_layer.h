@@ -19,5 +19,6 @@ void send_spi(void);
 void arm_spi_slave(void);
 
 
+void spi_rx_task();
 
 #endif /* SPI_APP_LAYER_H_ */

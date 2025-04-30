@@ -13,7 +13,7 @@ DocumentNamespace: https://silabs.com
 
 ## Creation Information
 Creator: Organization: Silicon Laboratories, Inc.
-Created: 2025-04-23T07:43:41.079330800Z
+Created: 2025-04-29T10:38:54.507585800Z
 ## Relationships
 Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-wiseconnect3_sdk-3.4.1
 Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-simplicity_sdk-2024.12.2
@@ -29,7 +29,10 @@ PackageSupplier: Organization: NOASSERTION
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-SIWG917M111MGTBA
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-brd4338a
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-si91x_memory_default_config
+Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-sl_si91x_button_917
+Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-sl_si91x_led_917
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-sl_ssi_instance
+Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-sleeptimer_si91x
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-syscalls
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-rsilib_opamp
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-wiseconnect_toolchain_gcc_standard
@@ -87,6 +90,7 @@ Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-si91x_common_flash
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-si91x_debug
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-rsilib_chip
+Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-rsilib_sysrtc
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-rsilib_udma_wrapper
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-si91x_stack_size_configuration
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1 CONTAINS SPDXRef-wiseconnect3_sdk-3.4.1-cmsis_usart_driver
@@ -128,6 +132,28 @@ PackageLicenseConcluded: Zlib
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1-si91x_memory_default_config CONTAINED_BY SPDXRef-wiseconnect3_sdk-3.4.1
 
 ## Package Information
+PackageName: Button
+SPDXID: SPDXRef-wiseconnect3_sdk-3.4.1-sl_si91x_button_917
+PackageVersion: 3.4.1
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: NOASSERTION
+PackageLicenseConcluded: MSLA
+## Relationships
+Relationship: SPDXRef-wiseconnect3_sdk-3.4.1-sl_si91x_button_917 CONTAINED_BY SPDXRef-wiseconnect3_sdk-3.4.1
+
+## Package Information
+PackageName: LED
+SPDXID: SPDXRef-wiseconnect3_sdk-3.4.1-sl_si91x_led_917
+PackageVersion: 3.4.1
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: NOASSERTION
+PackageLicenseConcluded: MSLA
+## Relationships
+Relationship: SPDXRef-wiseconnect3_sdk-3.4.1-sl_si91x_led_917 CONTAINED_BY SPDXRef-wiseconnect3_sdk-3.4.1
+
+## Package Information
 PackageName: SSI
 SPDXID: SPDXRef-wiseconnect3_sdk-3.4.1-sl_ssi_instance
 PackageVersion: 3.4.1
@@ -137,6 +163,17 @@ PackageSupplier: Organization: NOASSERTION
 PackageLicenseConcluded: Zlib
 ## Relationships
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1-sl_ssi_instance CONTAINED_BY SPDXRef-wiseconnect3_sdk-3.4.1
+
+## Package Information
+PackageName: Sleep Timer for Si91x
+SPDXID: SPDXRef-wiseconnect3_sdk-3.4.1-sleeptimer_si91x
+PackageVersion: 3.4.1
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: NOASSERTION
+PackageLicenseConcluded: Zlib
+## Relationships
+Relationship: SPDXRef-wiseconnect3_sdk-3.4.1-sleeptimer_si91x CONTAINED_BY SPDXRef-wiseconnect3_sdk-3.4.1
 
 ## Package Information
 PackageName: System Calls
@@ -766,6 +803,17 @@ PackageLicenseConcluded: Zlib
 Relationship: SPDXRef-wiseconnect3_sdk-3.4.1-rsilib_chip CONTAINED_BY SPDXRef-wiseconnect3_sdk-3.4.1
 
 ## Package Information
+PackageName: SYSRTC
+SPDXID: SPDXRef-wiseconnect3_sdk-3.4.1-rsilib_sysrtc
+PackageVersion: 3.4.1
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: NOASSERTION
+PackageLicenseConcluded: Zlib
+## Relationships
+Relationship: SPDXRef-wiseconnect3_sdk-3.4.1-rsilib_sysrtc CONTAINED_BY SPDXRef-wiseconnect3_sdk-3.4.1
+
+## Package Information
 PackageName: UDMA WRAPPER
 SPDXID: SPDXRef-wiseconnect3_sdk-3.4.1-rsilib_udma_wrapper
 PackageVersion: 3.4.1
@@ -842,14 +890,26 @@ PackageSupplier: Organization: Silicon Laboratories, Inc.
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-brd4002a
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-sl_system
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-event_handler
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-atomic
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-code_classification
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-status
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-sl_system_process_action
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-toolchain_variant_arm
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-sl_assert
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-component_catalog
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-sl_core
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-cmsis_core
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-sleeptimer
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-sl_system_init
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-sl_common
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-freertos_kernel_cortexm
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-sl_system_kernel
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-cmsis_common
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_init
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-freertos
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_headers
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_tick
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-freertos_heap_3
 
 ## Package Information
 PackageName: BRD4002A
@@ -883,6 +943,28 @@ PackageSupplier: Organization: Silicon Laboratories, Inc.
 PackageLicenseConcluded: Zlib
 ## Relationships
 Relationship: SPDXRef-simplicity_sdk-2024.12.2-event_handler CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
+PackageName: Atomic Operations Library
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-atomic
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Zlib
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-atomic CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
+PackageName: Code Classification
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-code_classification
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Zlib
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-code_classification CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
 
 ## Package Information
 PackageName: Status Codes Definitions
@@ -940,6 +1022,17 @@ PackageLicenseConcluded: Zlib
 Relationship: SPDXRef-simplicity_sdk-2024.12.2-component_catalog CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
 
 ## Package Information
+PackageName: core
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-sl_core
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Zlib
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-sl_core CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
 PackageName: CMSIS-Core
 SPDXID: SPDXRef-simplicity_sdk-2024.12.2-cmsis_core
 PackageVersion: 2024.12.2
@@ -966,6 +1059,17 @@ PackageComment: <text>The CMSIS is a set of tools, APIs, frameworks, and work fl
 Relationship: SPDXRef-cmsis_core-5.8.0 DESCENDANT_OF SPDXRef-simplicity_sdk-2024.12.2-cmsis_core
 
 ## Package Information
+PackageName: Sleep Timer
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-sleeptimer
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Zlib
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-sleeptimer CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
 PackageName: System Init
 SPDXID: SPDXRef-simplicity_sdk-2024.12.2-sl_system_init
 PackageVersion: 2024.12.2
@@ -986,3 +1090,136 @@ PackageSupplier: Organization: Silicon Laboratories, Inc.
 PackageLicenseConcluded: Zlib
 ## Relationships
 Relationship: SPDXRef-simplicity_sdk-2024.12.2-sl_common CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
+PackageName: FreeRTOS
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-freertos_kernel_cortexm
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: MSLA
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-freertos_kernel_cortexm CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
+PackageName: System Kernel
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-sl_system_kernel
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Zlib
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-sl_system_kernel CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
+PackageName: Common APIs for CMSIS-Compliant Kernels
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-cmsis_common
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Zlib
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-cmsis_common CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
+PackageName: CMSIS-RTOS2 Initialization
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_init
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Apache 2.0
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_init CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_init ANCESTOR_OF SPDXRef-cmsis_rtos2_init-5.8.0
+
+## Package Information
+PackageName: CMSIS_5
+SPDXID: SPDXRef-cmsis_rtos2_init-5.8.0
+PackageVersion: 5.8.0
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: ARM-software
+PackageOriginator: Organization: NOASSERTION
+PackageHomePage: https://github.com/ARM-software/CMSIS_5
+ExternalRef: PACKAGE-MANAGER purl pkg:github/ARM-software/CMSIS_5@5.8.0
+PackageComment: <text>The CMSIS is a set of tools, APIs, frameworks, and work flows</text>
+## Relationships
+Relationship: SPDXRef-cmsis_rtos2_init-5.8.0 DESCENDANT_OF SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_init
+
+## Package Information
+PackageName: FreeRTOS
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-freertos
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: MSLA
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-freertos CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+
+## Package Information
+PackageName: CMSIS-RTOS2 Headers
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_headers
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Apache 2.0
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_headers CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_headers ANCESTOR_OF SPDXRef-cmsis_rtos2_headers-5.8.0
+
+## Package Information
+PackageName: CMSIS_5
+SPDXID: SPDXRef-cmsis_rtos2_headers-5.8.0
+PackageVersion: 5.8.0
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: ARM-software
+PackageOriginator: Organization: NOASSERTION
+PackageHomePage: https://github.com/ARM-software/CMSIS_5
+ExternalRef: PACKAGE-MANAGER purl pkg:github/ARM-software/CMSIS_5@5.8.0
+PackageComment: <text>The CMSIS is a set of tools, APIs, frameworks, and work flows.</text>
+## Relationships
+Relationship: SPDXRef-cmsis_rtos2_headers-5.8.0 DESCENDANT_OF SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_headers
+
+## Package Information
+PackageName: CMSIS-RTOS2 OS Tick
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_tick
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: Apache 2.0
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_tick CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_tick ANCESTOR_OF SPDXRef-cmsis_rtos2_tick-5.8.0
+
+## Package Information
+PackageName: CMSIS_5
+SPDXID: SPDXRef-cmsis_rtos2_tick-5.8.0
+PackageVersion: 5.8.0
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: ARM-software
+PackageOriginator: Organization: NOASSERTION
+PackageHomePage: https://github.com/ARM-software/CMSIS_5
+ExternalRef: PACKAGE-MANAGER purl pkg:github/ARM-software/CMSIS_5@5.8.0
+PackageComment: <text>The CMSIS is a set of tools, APIs, frameworks, and work flows</text>
+## Relationships
+Relationship: SPDXRef-cmsis_rtos2_tick-5.8.0 DESCENDANT_OF SPDXRef-simplicity_sdk-2024.12.2-cmsis_rtos2_tick
+
+## Package Information
+PackageName: FreeRTOS Heap 3
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-freertos_heap_3
+PackageVersion: 2024.12.2
+PrimaryPackagePurpose: LIBRARY
+PackageDownloadLocation: NOASSERTION
+PackageSupplier: Organization: Silicon Laboratories, Inc.
+PackageLicenseConcluded: MSLA
+## Relationships
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-freertos_heap_3 CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2

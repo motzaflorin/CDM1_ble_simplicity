@@ -18,17 +18,26 @@ C_DEPS :=
 SUBDIRS := \
 . \
 autogen \
+simplicity_sdk_2024.12.2/platform/CMSIS/RTOS2/Source \
 simplicity_sdk_2024.12.2/platform/common/src \
+simplicity_sdk_2024.12.2/platform/service/sleeptimer/src \
 simplicity_sdk_2024.12.2/platform/service/system/src \
+simplicity_sdk_2024.12.2/util/third_party/freertos/cmsis/Source \
+simplicity_sdk_2024.12.2/util/third_party/freertos/kernel \
+simplicity_sdk_2024.12.2/util/third_party/freertos/kernel/portable/GCC/ARM_CM4F \
+simplicity_sdk_2024.12.2/util/third_party/freertos/kernel/portable/MemMang \
 wiseconnect3_sdk_3.4.1/components/board/silabs/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src/iPMU_prog/iPMU_dotc \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/common/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/config/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/cmsis_driver \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/hardware_drivers/button/src \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/hardware_drivers/led/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/peripheral_drivers/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/rom_driver/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/service/clock_manager/src \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/service/sleeptimer/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_api/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_peripheral_drivers/src \

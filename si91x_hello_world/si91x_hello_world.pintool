@@ -4,6 +4,9 @@
     <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
     <property object="GPIO_10" propertyId="pin.name" value=""/>
     <property object="GPIO_25" propertyId="pin.name" value=""/>
+    <property object="GPIO_46" propertyId="pin.name" value=""/>
+    <property object="GPIO_46" propertyId="pin.reserve" value="Reserved"/>
+    <property object="GPIO_47" propertyId="pin.name" value=""/>
     <property object="PORTIO" propertyId="portio.ssi_master.enable.cs0_" value="Enabled"/>
     <property object="PORTIO" propertyId="portio.ssi_master.enable.miso_data1" value="Enabled"/>
     <property object="PORTIO" propertyId="portio.ssi_master.enable.mosi_data0" value="Enabled"/>
