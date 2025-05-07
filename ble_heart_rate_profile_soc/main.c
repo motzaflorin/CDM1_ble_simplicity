@@ -26,6 +26,8 @@
 #include "sl_system_process_action.h"
 #endif // SL_CATALOG_KERNEL_PRESENT
 
+#include<stdio.h>
+
 int main(void)
 {
   // Initialize Silicon Labs device, system, service(s) and protocol stack(s).
@@ -35,6 +37,11 @@ int main(void)
 
   // Initialize the application. For example, create periodic timer(s) or
   // task(s) if the kernel is present.
+
+  // A reassigning of SWD pins or a clock disable happens in default project - delay for flashing / debugging purposes
+  printf("Wait for debug / flash purposes\r\n");
+  for (volatile int i = 0; i < 100000; i++);
+  printf("Init App\r\n");
   app_init();
 
 #if defined(SL_CATALOG_KERNEL_PRESENT)

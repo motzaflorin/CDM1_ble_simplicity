@@ -49,6 +49,8 @@
 #include "rsi_bt_common_apis.h"
 #include "rsi_common_apis.h"
 
+#include <time.h>
+
 #if SL_SI91X_TICKLESS_MODE == 0 && defined(SLI_SI91X_MCU_INTERFACE)
 #include "sl_si91x_m4_ps.h"
 #include "sl_si91x_power_manager.h"
@@ -66,6 +68,28 @@
 //! BLE characteristic service uuid - BATTERY SERVICE
 #define RSI_BLE_BATTERY_SERVICE_UUID          0x180F
 #define RSI_BLE_BATTERY_LEVEL_UUID            0x2A19
+#define RSI_BLE_BATTERY_CCCD_UUID             0x2902
+
+
+//static const uint8_t battery_service_uuid[]     = { 0x0F, 0x18 };  // 0x180F
+//static const uint8_t battery_level_uuid[]       = { 0x19, 0x2A };  // 0x2A19
+//static const uint8_t cccd_uuid[]                = { 0x02, 0x29 };  // 0x2902
+
+/******************************************************
+ * *                     global battery char att value handle
+ * ******************************************************/
+// Handles
+//static uint16_t battery_service_handle          = 0;
+//static uint16_t battery_level_char_decl_handle  = 0;
+static uint16_t battery_char_val_att_handle      = 0;
+//static bool notify_enabled = false;
+//static uint16_t battery_level_cccd_handle       = 0;
+//
+//// State
+uint8_t battery_level_value              = 75;
+//static bool notify_enabled                      = false;
+//static uint8_t conn_handle                      = 0xFF;
+
 
 
 
@@ -123,7 +147,19 @@ typedef struct heart_rate_s {
   int8_t rr_interval;
 } heart_rate_t;
 
+
+//typedef struct heart_rate_s {
+//  int8_t flags;
+//  int8_t heart_rate_measure_8;
+//  int16_t heart_rate_measure_16;
+//  int8_t energy_expended_status;
+//  int8_t rr_interval;
+//} heart_rate_t;
+
 uint8_t heartratefun(heart_rate_t, uint8_t *);
+
+
+
 
 /******************************************************
  * *                     Heart rate  Macros
@@ -447,74 +483,43 @@ static uint32_t rsi_ble_battery_add_new_serv(void)
 {
   uuid_t new_uuid                       = { 0 };
   rsi_ble_resp_add_serv_t new_serv_resp = { 0 };
-//  uint8_t sensor_data                   = 5;
-//  uint8_t control_data                  = 0;
+  uint8_t initial_battery_level                   = 100;
+
 
   //! adding new service
   new_uuid.size      = 2;
   new_uuid.val.val16 = RSI_BLE_BATTERY_SERVICE_UUID;
   rsi_ble_add_service(new_uuid, &new_serv_resp);
 
-//  //! adding characteristic service attribute to the service
-//  new_uuid.size      = 2;
-//  new_uuid.val.val16 = RSI_BLE_BATTERY_LEVEL_UUID;
-//  rsi_ble_add_char_serv_att(new_serv_resp.serv_handler,
-//                            new_serv_resp.start_handle + 1,
-//                            RSI_BLE_ATT_PROPERTY_NOTIFY,
-//                            new_serv_resp.start_handle + 2,
-//                            new_uuid);
-//
-//  //! adding characteristic value attribute to the service
-//  rsi_ble_measurement_hndl = new_serv_resp.start_handle + 2;
-//  new_uuid.size            = 2;
-//  new_uuid.val.val16       = RSI_BLE_BATTERY_LEVEL_UUID;
-//  rsi_ble_add_char_val_att(new_serv_resp.serv_handler,
-//                           new_serv_resp.start_handle + 2,
-//                           new_uuid,
-//                           RSI_BLE_ATT_PROPERTY_NOTIFY,
-//                           (uint8_t *)&rate,
-//                           sizeof(rate));
 
   //! adding characteristic service attribute to the service
   new_uuid.size      = 2;
   new_uuid.val.val16 = RSI_BLE_BATTERY_LEVEL_UUID;
   rsi_ble_add_char_serv_att(new_serv_resp.serv_handler,
                             new_serv_resp.start_handle + 4,
-                            RSI_BLE_ATT_PROPERTY_READ,
+                            RSI_BLE_ATT_PROPERTY_READ ,
                             new_serv_resp.start_handle + 5,
                             new_uuid);
 
   //! adding characteristic value attribute to the service
   new_uuid.size      = 2;
   new_uuid.val.val16 = RSI_BLE_BATTERY_LEVEL_UUID;
+  battery_char_val_att_handle = new_serv_resp.start_handle + 5;
   rsi_ble_add_char_val_att(new_serv_resp.serv_handler,
-                           new_serv_resp.start_handle + 5,
+                           battery_char_val_att_handle,
                            new_uuid,
-                           RSI_BLE_ATT_PROPERTY_READ,
-                           NULL,
-                           0);
+                           RSI_BLE_ATT_PROPERTY_READ ,
+                           &initial_battery_level,
+                           sizeof(initial_battery_level));
 
-//  //! adding characteristic service attribute to the service
-//  new_uuid.size      = 2;
-//  new_uuid.val.val16 = RSI_BLE_HEART_RATE_CONTROL_POINT_UUID;
-//  rsi_ble_add_char_serv_att(new_serv_resp.serv_handler,
-//                            new_serv_resp.start_handle + 6,
-//                            RSI_BLE_ATT_PROPERTY_WRITE,
-//                            new_serv_resp.start_handle + 7,
-//                            new_uuid);
-//
-//  //! adding characteristic value attribute to the service
-//  new_uuid.size      = 2;
-//  new_uuid.val.val16 = RSI_BLE_HEART_RATE_CONTROL_POINT_UUID;
-//  rsi_ble_add_char_val_att(new_serv_resp.serv_handler,
-//                           new_serv_resp.start_handle + 7,
-//                           new_uuid,
-//                           RSI_BLE_ATT_PROPERTY_WRITE,
-//                           &control_data,
-//                           sizeof(control_data));
+  printf("Battery value handle: %u\r\n", battery_char_val_att_handle);
+  printf("Battery CCCD handle (should be value + 1): %u\r\n", battery_char_val_att_handle + 1);
+
+
 
   return 0;
 }
+
 
 /*==============================================*/
 /**
@@ -678,6 +683,9 @@ static void rsi_ble_on_connect_event(rsi_ble_event_conn_status_t *resp_conn)
 {
   memcpy(&conn_event_to_app, resp_conn, sizeof(rsi_ble_event_conn_status_t));
   rsi_ble_app_set_event(RSI_BLE_CONN_EVENT);
+  uint8_t level = 85;
+  int32_t status = rsi_ble_set_local_att_value(battery_char_val_att_handle, 1, &level);
+  printf("Battery level set status = %ld, handle = 0x%04X\n", status, battery_char_val_att_handle);
 }
 
 /*==============================================*/
@@ -720,6 +728,8 @@ static void rsi_ble_on_gatt_write_event(uint16_t event_id, rsi_ble_event_write_t
       rsi_ble_app_clear_event(RSI_BLE_GATT_SEND_DATA);
     }
   }
+
+  printf("write_event handle value is %d\r\n", *((uint16_t *)app_ble_write_event.handle));
   rsi_ble_app_set_event(RSI_BLE_GATT_WRITE_EVENT);
 
   return;
@@ -819,7 +829,8 @@ uint8_t heartratefun(heart_rate_t rate, uint8_t *p_data)
 
   if (!(rate.flags & BIT(0))) {
     if (rate.heart_rate_measure_8 < 85) {
-      rate.heart_rate_measure_8 = rate.heart_rate_measure_8 + 2;
+        rate.heart_rate_measure_8 = (rand() % 100); // 0–99%
+//      rate.heart_rate_measure_8 = rate.heart_rate_measure_8 + 2;
     } else {
       rate.heart_rate_measure_8 = 75;
     }
@@ -953,7 +964,7 @@ void ble_heart_rate_gatt_server(void *argument)
                                   rsi_ble_on_gatt_write_event,
                                   NULL,
                                   NULL,
-                                  ble_on_read_req_event, //callback for battery service read purpose
+                                  ble_on_read_req_event, //read value of a characteristic
                                   NULL,
                                   NULL,
                                   ble_on_att_desc_event,
@@ -1146,6 +1157,7 @@ adv:
       case RSI_BLE_GATT_WRITE_EVENT: {
         //! event invokes when write/notification events received
         //! clear the served event
+         printf("RSI_BLE_GATT_WRITE_EVENT happend\r\n");
 
         rsi_ble_app_clear_event(RSI_BLE_GATT_WRITE_EVENT);
 #if (GATT_ROLE == CLIENT)
