@@ -49,6 +49,9 @@
 #include "rsi_bt_common_apis.h"
 #include "rsi_common_apis.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
+
 #include <time.h>
 
 
@@ -122,7 +125,7 @@
 #define RSI_BLE_GATT_SEND_DATA                0x08
 #define RSI_APP_EVENT_PHY_UPDATE_COMPLETE     0x09
 #define RSI_BLE_COMMAND_SET_PHY               0x0A
-#define RSI_BLE_GATT_SEND_DATA_custom               0x0B
+#define RSI_BLE_GATT_SEND_ECG_DATA            0x0B
 
 #define BLE_2M_PHY 0x02
 #define BLE_1M_PHY 0x01
@@ -182,19 +185,19 @@ uint8_t heartratefun(heart_rate_t, uint8_t *);
 
 #define RSI_REM_DEV_ADDR_LEN 18
 
+/*=======================================================================*/
+// Custom service
+/*=======================================================================*/
+// Derfine a cusotm service and characteristics
+// USE full 128 bit for custom UUID
 
-// Derfine a cusotm service and characteristic
-
-static const uint8_t AFE_SERVICE_UUID[16] = { 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF,
-                                              0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF };
-
-static const uint8_t ECG_CHAR_UUID[16] = { 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC,
-                                           0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC };
-
-static const uint8_t ECG_READ_UUID[16] = { 0xEA, 0xFA, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC,
-                                           0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC };
-
+static const uint8_t AFE_SERVICE_UUID[16] = { 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF, 0xAF, 0xEF };
+static const uint8_t ECG_CHAR_UUID[16] = { 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC };
+static const uint8_t ECG_READ_UUID[16] = { 0xEA, 0xFA, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC, 0xEC };
+// handle for ecg_notify_val to be assigned to handle at init and referenced later
 uint16_t ecg_char_val_handle = 0;
+// Define the frame length for ECG data
+#define ECG_FRAME_MAX_SIZE 15
 
 /*=======================================================================*/
 //!    Powersave configurations
@@ -510,7 +513,11 @@ static uint32_t rsi_ble_afe_add_custom_service(void)
 {
   uuid_t new_uuid = {0};
   rsi_ble_resp_add_serv_t new_serv_resp = {0};
-  uint8_t ecg_initial_value[2] = {0x00, 0x00};
+  // chcek and return an error code buffer overflow
+  if (ECG_FRAME_MAX_SIZE > RSI_DEV_ATT_LEN){
+      return -1;
+  }
+  uint8_t ecg_initial_value[ECG_FRAME_MAX_SIZE] = {0x00};
   uint8_t sensor_data = 55;
 //  uint16_t handle_cursor = 0;
   int ret;
@@ -786,10 +793,10 @@ static void rsi_ble_on_gatt_write_event(uint16_t event_id, rsi_ble_event_write_t
   if ((ecg_char_val_handle + 1) == *((uint16_t *)app_ble_write_event.handle)) {
      if (app_ble_write_event.att_value[0] == 1) {
        notify_start = true;
-       rsi_ble_app_set_event(RSI_BLE_GATT_SEND_DATA_custom);
+       rsi_ble_app_set_event(RSI_BLE_GATT_SEND_ECG_DATA);
      } else if (app_ble_write_event.att_value[0] == 0) {
        notify_start = false;
-       rsi_ble_app_clear_event(RSI_BLE_GATT_SEND_DATA_custom);
+       rsi_ble_app_clear_event(RSI_BLE_GATT_SEND_ECG_DATA);
      }
    }
   rsi_ble_app_set_event(RSI_BLE_GATT_WRITE_EVENT);
@@ -917,9 +924,20 @@ uint8_t heartratefun(heart_rate_t rate, uint8_t *p_data)
 
 uint8_t custom_service_data_function(uint8_t *p_data)
 {
+  uint8_t hex_array[10] = {0xA0, 0xA1, 0xA2, 0xA3, 0xA4,
+                               0xA5, 0xA6, 0xA7, 0xA8, 0xA9};
 
-  *p_data =  (rand() % 100); // 0–99%
-  return 0;
+  // Fill p_data with ECG_FRAME_MAX_SIZE values randomly sampled from hex_array
+      for (int i = 0; i < ECG_FRAME_MAX_SIZE; i++) {
+          int rand_index = rand() % 10;
+          p_data[i] = hex_array[rand_index];
+
+      }
+      // Delay for 500 ms
+      vTaskDelay(pdMS_TO_TICKS(500));
+      return 0;
+//  *p_data =  (rand() % 100); // 0–99%
+//  return 0;
 }
 
 #ifdef SLI_SI91X_MCU_INTERFACE
@@ -963,6 +981,7 @@ void ble_heart_rate_gatt_server(void *argument)
   int32_t status = 0;
   int32_t event_id;
   int8_t data[8] = { 0 };
+  uint8_t name[2] = {0x11, 0x22};
   uint8_t len;
   uint8_t connected                                          = false;
   sl_wifi_firmware_version_t version                         = { 0 };
@@ -1147,13 +1166,14 @@ adv:
           }
         }
       } break;
-      case RSI_BLE_GATT_SEND_DATA_custom: {
+      case RSI_BLE_GATT_SEND_ECG_DATA: {
 
               printf("reached case custom\r\n");
               if (connected == true) {
                 if (notify_start == true) {
-                  custom_service_data_function((uint8_t *)data);
-                  status = rsi_ble_set_local_att_value(ecg_char_val_handle, sizeof(uint8_t), (uint8_t *)data);
+//                  custom_service_data_function((uint8_t *)data);
+                  custom_service_data_function((uint8_t *)name);
+                  status = rsi_ble_set_local_att_value(ecg_char_val_handle, ECG_FRAME_MAX_SIZE, name);
                   if (status != RSI_SUCCESS) {
                     LOG_PRINT("\n Set Local att value cmd failed = 0x%lX \n", status);
                   }
