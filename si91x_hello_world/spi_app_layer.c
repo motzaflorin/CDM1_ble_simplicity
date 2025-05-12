@@ -13,10 +13,10 @@
 #include "sl_sleeptimer.h"
 #include "spi_sync.h"
 
-static   void my_ssi_event_cb(uint32_t event);
+static   void ssi_isr(uint32_t event);
 
 //uint8_t data_in[10] = {0xaa};
-uint8_t data_out[10] = { 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc };
+//uint8_t data_out[10] = { 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc }; // moved to header
 
 sl_ssi_handle_t ssi_handle = 0;
 volatile uint16_t ring_head, ring_tail = 0;
@@ -48,7 +48,6 @@ typedef enum {
     WAIT_LENGTH,
     WAIT_PAYLOAD,
     WAIT_CHECKSUM
-//    FRAME_COMPLETE
 } spi_rx_state_t;
 #define MAX_PAYLOAD_SIZE 64
 spi_rx_state_t rx_state = WAIT_HEADER;
@@ -64,6 +63,15 @@ typedef struct {
 spi_comm_context_t spi_ctx;
 
 
+typedef enum {
+  SPI_MODE_RECEIVE,
+  SPI_MODE_SEND,
+  SPI_MODE_IDLE
+} spi_mode_t;
+volatile spi_mode_t spi_mode;
+
+volatile bool spi_data_ready = false;
+
 // ring buffer set
 void ring_buffer_put(uint8_t byte) {
     ring_buf[ring_head] = byte;
@@ -78,39 +86,47 @@ bool ring_buffer_get(uint8_t *byte) {
     return true;
 }
 
+
+volatile spi_mode_t spi_mode = SPI_MODE_IDLE;
+
 // callback handling
- static void my_ssi_event_cb(uint32_t event)
+// static void ssi_isr(uint32_t event)
+// {
+//   (void)event;
+//   BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+//    xSemaphoreGiveFromISR(spi_rx_sem, &xHigherPriorityTaskWoken);
+//    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+// }
+ static void ssi_isr(uint32_t event)
  {
      if (event & ARM_SPI_EVENT_TRANSFER_COMPLETE) {
          printf("SPI transfer done\r\n");
+//         send_spi();
 
          // Push received bytes into the ring buffer
+         if(spi_mode == SPI_MODE_RECEIVE) {
+           for (uint8_t i = 0; i < sizeof(data_in); i++) {
+                        ring_buffer_put(data_in[i]);
+                    }
+         } else {
+             printf("ISR SEND print\r\n");
+//             switch ()
 
-         for (uint8_t i = 0; i < sizeof(data_in); i++) {
-             ring_buffer_put(data_in[i]);
-//             printf("data received is %0x\r\n",data_in[i]);
          }
-
          BaseType_t xHigherPriorityTaskWoken = pdFALSE;
          xSemaphoreGiveFromISR(spi_rx_sem, &xHigherPriorityTaskWoken);
          portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 
-         // Rearm SPI
-         read_spi();
+         // Rearm SPI- should be done external of isr
+//         read_spi();
+//         send_spi();
      }
  }
-
-
- // slave mode
 
  void init_spi_slave(void)
  {
    printf("Initialiaze SPI SLAVE from SSI\r\n");
    sl_status_t status;
-
-//   const char *data_out = "Some data";
-
-//   uint32_t length
 
    // Configure as SPI SLAVE
    status = sl_si91x_ssi_init(SL_SSI_SLAVE_ACTIVE, &ssi_handle);
@@ -129,7 +145,8 @@ bool ring_buffer_get(uint8_t *byte) {
    }
 
 
-   sl_si91x_ssi_register_event_callback(ssi_handle, (sl_ssi_signal_event_t) my_ssi_event_cb);
+   sl_si91x_ssi_register_event_callback(ssi_handle, (sl_ssi_signal_event_t) ssi_isr);
+//   sl_si91x_ssi_unregister_event_callback();
 
 ////  TRANSFER DATA
    RSI_SPI_SetSlaveSelectNumber(0);  // Use the correct CS number - by default it uses some multislave config option
@@ -138,8 +155,9 @@ bool ring_buffer_get(uint8_t *byte) {
 //   arm_spi_slave();  // prepare for next transaction
    spi_ctx.state = WAIT_HEADER;
    spi_ctx.payload_counter = 0;
-   read_spi();
-//   send_spi();
+   spi_mode = SPI_MODE_SEND;
+//   read_spi();
+   send_spi();
 
  }
 void read_spi()
@@ -153,8 +171,8 @@ void read_spi()
 
 void send_spi()
 {
+  spi_data_ready = true;
   sl_status_t status;
-//  memset(data_out, 0x33, sizeof(data_out));
   status = sl_si91x_ssi_send_data(ssi_handle, (void *) data_out, sizeof(data_out));
   if (status != SL_STATUS_OK) {
             printf("SEND Failed \%ld\r\n", status);
@@ -215,28 +233,40 @@ void spi_rx_handler(uint8_t rx_byte)
             // Either way, reset
             spi_ctx.state = WAIT_HEADER;
             break;
-
-//        case FRAME_COMPLETE:
-//            // Should never stay here; always reset
-//            spi_ctx.state = WAIT_HEADER;
-//            break;
     }
 }
 
 void spi_rx_task()
 {
     uint8_t byte;
-    while (1) {
+    for (;;) {
         // Wait for semaphore from ISR
-        if (xSemaphoreTake(spi_rx_sem, portMAX_DELAY) == pdTRUE) {
+      if (xSemaphoreTake(spi_rx_sem, portMAX_DELAY) == pdTRUE) {
+          if (spi_mode == SPI_MODE_RECEIVE) {
             // Drain all received bytes
             while (ring_buffer_get(&byte)) {
-                spi_rx_handler(byte);  // your state machine
-//                printf("Function for handling  the state\r\n");
+                spi_rx_handler(byte);
+                printf("Function for handling RECEIVE\r\n");
+                read_spi();
             }
-        }
+          } else {
+//           handle stuff if needed
+                          // modify isr for type of send or receive handleing
+                          //
+              if (spi_data_ready) {
+
+
+                send_spi();
+                spi_data_ready = false;
+//                SSI0->IMR |= BIT(0);
+                printf("Function for handling SEND\r\n");
+              }
+          }
+      }
     }
 }
+
+
 
 
 

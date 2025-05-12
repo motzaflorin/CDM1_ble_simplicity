@@ -17,8 +17,11 @@ void init_spi_slave(void);
 void read_spi(void);
 void send_spi(void);
 void arm_spi_slave(void);
+void slave_application_data_ready(uint8_t* buffer, uint32_t length);
 
 
 void spi_rx_task();
+
+extern uint8_t data_out[10];
 
 #endif /* SPI_APP_LAYER_H_ */
