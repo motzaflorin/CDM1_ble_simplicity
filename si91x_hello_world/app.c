@@ -37,7 +37,7 @@ void app_init(void)
   printf("Hello World!\r\n");
   // TASK notification for wake line
 
-  // Semaphore and task created for SPI 0 latency
+//   Semaphore and task created for SPI 0 latency
   spi_rx_sem = xSemaphoreCreateBinary();
   if (!spi_rx_sem) {
       printf("Failed to create SPI RX semaphore\r\n");
