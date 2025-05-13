@@ -90,7 +90,7 @@ void sl_si91x_button_isr(uint8_t pin, int8_t state)
 #ifndef SI917_DEVKIT
       sl_si91x_led_toggle(LED_INSTANCE.pin);
 //      send_spi();
-//      read_spi();
+      read_spi();
       gpio_example_process_action();
       // Flags to be set to run the instance each time
 //      transfer_complete = false;

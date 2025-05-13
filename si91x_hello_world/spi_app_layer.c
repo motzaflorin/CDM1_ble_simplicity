@@ -23,6 +23,24 @@ volatile uint16_t ring_head, ring_tail = 0;
 uint8_t ring_buf[RING_BUF_SIZE];
 #define MAX_PAYLOAD_SIZE 64
 uint8_t data_in[MAX_PAYLOAD_SIZE + 3];  // SPI input buffer MAX_PAYLOAD_SIZE + header + length + cehcksum
+//uint8_t data_out_transfer[MAX_PAYLOAD_SIZE + 3];// = { 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc };
+uint8_t data_out_transfer[67] = {
+    // 0xAA for first 10
+    0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA,
+    // 0xAB for next 10
+    0xAB, 0xAB, 0xAB, 0xAB, 0xAB, 0xAB, 0xAB, 0xAB, 0xAB, 0xAB,
+    // 0xAC for next 10
+    0xAC, 0xAC, 0xAC, 0xAC, 0xAC, 0xAC, 0xAC, 0xAC, 0xAC, 0xAC,
+    // 0xAD for next 10
+    0xAD, 0xAD, 0xAD, 0xAD, 0xAD, 0xAD, 0xAD, 0xAD, 0xAD, 0xAD,
+    // 0xAE for next 10
+    0xAE, 0xAE, 0xAE, 0xAE, 0xAE, 0xAE, 0xAE, 0xAE, 0xAE, 0xAE,
+    // 0xAF for next 10
+    0xAF, 0xAF, 0xAF, 0xAF, 0xAF, 0xAF, 0xAF, 0xAF, 0xAF, 0xAF,
+    // 0xB0 for last 7
+    0xB0, 0xB0, 0xB0, 0xB0, 0xB0, 0xB0, 0xB0
+};
+//uint8_t data_in[1];
 #define HEADER 0xB6
 
 typedef enum {
@@ -108,7 +126,11 @@ volatile spi_mode_t spi_mode = SPI_MODE_IDLE;
              printf("ISR in MODE_RECEIVE\r\n");
            for (uint8_t i = 0; i < sizeof(data_in); i++) {
                         ring_buffer_put(data_in[i]);
+//                        if (data_in[i] == 0xBB) {
+//                                    send_spi();
+//                        }
                     }
+//           send_spi
          } else {
              printf("ISR in MODE_SEND\r\n");
 //             switch ()
@@ -160,26 +182,35 @@ volatile spi_mode_t spi_mode = SPI_MODE_IDLE;
 //   SSISlave->IMR |= RXFIM;    // enable RX interrupt only
 
 //   send_spi();
-   read_spi();
+//   read_spi();
 
  }
+//void read_spi() // works is validated
+//{
+//  sl_status_t status;
+//
+//  status = sl_si91x_ssi_receive_data(ssi_handle, (void *) data_in, sizeof(data_in));
+//  if (status != SL_STATUS_OK) {
+//            printf("RECEIVE Failed \%ld\r\n", status);
+//        }
+//}
 void read_spi()
 {
   sl_status_t status;
 
-  status = sl_si91x_ssi_receive_data(ssi_handle, (void *) data_in, sizeof(data_in));
+  status = sl_si91x_ssi_transfer_data(ssi_handle, (void *) data_out_transfer, (void *) data_in, sizeof(data_in));
   if (status != SL_STATUS_OK) {
             printf("RECEIVE Failed \%ld\r\n", status);
         }
 }
-//volatile int tx_index = 0;            // global index for current send position
-//volatile int tx_length = 10;          // set to your current data length
+volatile int tx_index = 0;            // global index for current send position
+volatile int tx_length = 10;          // set to your current data length
 void send_spi()
 {
 //  tx_index = 0;
 //  spi_data_ready = true;
 ////  test_fill_tx_fifo();
-  sl_status_t status;
+//  sl_status_t status;
 //  SSISlave->SSIENR = 0;   // Disable peripheral → clears internal FIFOs
 //
 //  // Set configuration based on datasheet
@@ -205,12 +236,22 @@ void send_spi()
 //  NVIC_EnableIRQ(44); // check your IRQ number
 
 
+//
+//  status = sl_si91x_ssi_send_data(ssi_handle, (void *) data_out, sizeof(data_out));
+//  printf("Send SPI funciton\r\n");
+//  if (status != SL_STATUS_OK) {
+//            printf("SEND Failed \%ld\r\n", status);
+//        }
+  SSISlave->SSIENR = 0;
+  SSISlave->SSIENR = 1;
 
-  status = sl_si91x_ssi_transfer_data(ssi_handle, (void *) data_out,(void *) data_in, sizeof(data_out));
-  printf("Send SPI funciton\r\n");
-  if (status != SL_STATUS_OK) {
-            printf("SEND Failed \%ld\r\n", status);
-        }
+  tx_index = 0;
+  tx_length = sizeof(data_out);
+
+  while ((tx_index < tx_length) && (SSISlave->TXFLR < 16)) {
+      SSISlave->DR = data_out[tx_index++];
+//      printf("DATA in fifo buffer %02x\r\n",SSISlave->DR );
+  }
 }
 
 //void IRQ044_Handler(void)
@@ -319,12 +360,12 @@ void spi_rx_task()
                 spi_rx_handler(byte);
                 printf("Function for handling RECEIVE\r\n");
 //
-                if (byte == 0xBB)
-                  {
-                    printf("Byte print %02x\r\n",byte);
-                    spi_mode = SPI_MODE_SEND;
-                    send_spi();
-                  }
+//                if (byte == 0xBB)
+//                  {
+//                    printf("Byte print %02x\r\n",byte);
+//                    spi_mode = SPI_MODE_SEND;
+//                    send_spi();
+//                  }
 //                read_spi();
             }
           } else {
