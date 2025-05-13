@@ -21,6 +21,7 @@ void slave_application_data_ready(uint8_t* buffer, uint32_t length);
 
 
 void spi_rx_task();
+void spi_manual();
 
 extern uint8_t data_out[10];
 

@@ -12,7 +12,7 @@
 
 #include "sl_sleeptimer.h"
 #include "spi_sync.h"
-
+//#define RXFIM    (1U << 4)
 //static   void ssi_isr(uint32_t event);
 
 //uint8_t data_in[10] = {0xaa};
@@ -61,7 +61,7 @@ typedef struct {
 } spi_comm_context_t;
 
 spi_comm_context_t spi_ctx;
-
+//#define TXEIM  0x01
 
 typedef enum {
   SPI_MODE_RECEIVE,
@@ -97,133 +97,157 @@ volatile spi_mode_t spi_mode = SPI_MODE_IDLE;
 //    xSemaphoreGiveFromISR(spi_rx_sem, &xHigherPriorityTaskWoken);
 //    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 // }
-// static void ssi_isr(uint32_t event)
-// {
-//     if (event & ARM_SPI_EVENT_TRANSFER_COMPLETE) {
-//         printf("SPI transfer done\r\n");
-////         send_spi();
-//
-//         // Push received bytes into the ring buffer
-//         if(spi_mode == SPI_MODE_RECEIVE) {
-//           for (uint8_t i = 0; i < sizeof(data_in); i++) {
-//                        ring_buffer_put(data_in[i]);
-//                    }
-//         } else {
-//             printf("ISR SEND print\r\n");
-////             switch ()
-//
-//         }
-//         BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-//         xSemaphoreGiveFromISR(spi_rx_sem, &xHigherPriorityTaskWoken);
-//         portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
-//
-//         // Rearm SPI- should be done external of isr
-////         read_spi();
-////         send_spi();
-//     }
-// }
+ static void ssi_isr(uint32_t event)
+ {
+     if (event & ARM_SPI_EVENT_TRANSFER_COMPLETE) {
+         printf("SPI transfer done\r\n");
+//         send_spi();
+
+         // Push received bytes into the ring buffer
+         if(spi_mode == SPI_MODE_RECEIVE) {
+             printf("ISR in MODE_RECEIVE\r\n");
+           for (uint8_t i = 0; i < sizeof(data_in); i++) {
+                        ring_buffer_put(data_in[i]);
+                    }
+         } else {
+             printf("ISR in MODE_SEND\r\n");
+//             switch ()
+
+         }
+         BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+         xSemaphoreGiveFromISR(spi_rx_sem, &xHigherPriorityTaskWoken);
+         portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+
+         // Rearm SPI- should be done external of isr
+//         read_spi();
+//         send_spi();
+     }
+ }
 
  void init_spi_slave(void)
  {
    printf("Initialiaze SPI SLAVE from SSI\r\n");
-//   sl_status_t status;
-//
-//   // Configure as SPI SLAVE
-//   status = sl_si91x_ssi_init(SL_SSI_SLAVE_ACTIVE, &ssi_handle);
-//   if (status != SL_STATUS_OK) {
-//     printf("Init Failed\n");
-//   }
-//
-//   // set power and config
-//   status = sl_si91x_ssi_set_configuration(
-//       ssi_handle,
-//     &ssi_secondary_configuration,  // structure from sl_ssi_instances.h
-//     SSI_SLAVE_0                 // as of now use 0
-//   );
-//   if (status != SL_STATUS_OK) {
-//       printf("Set Config Failed\r\\n");
-//   }
-//
-//
-//   sl_si91x_ssi_register_event_callback(ssi_handle, (sl_ssi_signal_event_t) ssi_isr);
-////   sl_si91x_ssi_unregister_event_callback();
-//
-//////  TRANSFER DATA
-//   RSI_SPI_SetSlaveSelectNumber(0);  // Use the correct CS number - by default it uses some multislave config option
-//
-//   // Initial slave arm to receive data before master sends anything
-////   arm_spi_slave();  // prepare for next transaction
-///
-///
-// test only manual configuration
-   send_spi();
+   sl_status_t status;
+
+   // Configure as SPI SLAVE
+   status = sl_si91x_ssi_init(SL_SSI_SLAVE_ACTIVE, &ssi_handle);
+   if (status != SL_STATUS_OK) {
+     printf("Init Failed\n");
+   }
+
+   // set power and config
+   status = sl_si91x_ssi_set_configuration(
+       ssi_handle,
+     &ssi_secondary_configuration,  // structure from sl_ssi_instances.h
+     SSI_SLAVE_0                 // as of now use 0
+   );
+   if (status != SL_STATUS_OK) {
+       printf("Set Config Failed\r\\n");
+   }
+   sl_si91x_ssi_register_event_callback(ssi_handle, (sl_ssi_signal_event_t) ssi_isr);
+//   sl_si91x_ssi_unregister_event_callback();
+
+////  TRANSFER DATA
+   RSI_SPI_SetSlaveSelectNumber(0);  // Use the correct CS number - by default it uses some multislave config option
+
    spi_ctx.state = WAIT_HEADER;
    spi_ctx.payload_counter = 0;
-   spi_mode = SPI_MODE_SEND;
-//   read_spi();
+   spi_mode = SPI_MODE_RECEIVE; // SPI_MODE_SEND;
+//   SSISlave->SSIENR = 0;   // disable
+//   SSISlave->SSIENR = 1;   // re-enable
+//   // Re-arm interrupts
+//   SSISlave->IMR = 0;
+//   SSISlave->IMR |= RXFIM;    // enable RX interrupt only
+
 //   send_spi();
+   read_spi();
 
  }
 void read_spi()
 {
   sl_status_t status;
+
   status = sl_si91x_ssi_receive_data(ssi_handle, (void *) data_in, sizeof(data_in));
   if (status != SL_STATUS_OK) {
             printf("RECEIVE Failed \%ld\r\n", status);
         }
-
 }
-// Example test code to load test pattern into TX FIFO
-//void test_fill_tx_fifo(void)
-//{
-//  SSISlave->SSIENR = 1;
-//  printf("SSIENR = %u\r\n", SSISlave->SSIENR);
-//    uint32_t fifo_level_before = SSISlave->TXFLR;
-//    printf("TX FIFO level before: %lu\r\n", fifo_level_before);
-//
-//    for (int i = 0; i < 10; i++) {
-//        SSISlave->DR = data_out[i];    // write test value
-//        uint32_t current_level = SSISlave->TXFLR;
-//        printf("After write %d: TX FIFO level = %lu\r\n", i, current_level);
-//    }
-//
-//    uint32_t fifo_level_after = SSISlave->TXFLR;
-//    printf("TX FIFO level after: %lu\r\n", fifo_level_after);
-//}
+//volatile int tx_index = 0;            // global index for current send position
+//volatile int tx_length = 10;          // set to your current data length
 void send_spi()
 {
-  spi_data_ready = true;
-//  test_fill_tx_fifo();
-//  sl_status_t status;
-  SSISlave->SSIENR = 0;   // Disable peripheral → clears internal FIFOs
+//  tx_index = 0;
+//  spi_data_ready = true;
+////  test_fill_tx_fifo();
+  sl_status_t status;
+//  SSISlave->SSIENR = 0;   // Disable peripheral → clears internal FIFOs
+//
+//  // Set configuration based on datasheet
+//  SSISlave->CTRLR0_b.SCPOL = 0;
+//  SSISlave->CTRLR0_b.SCPH = 0;
+//  SSISlave->CTRLR0_b.TMOD = 0x00; // 2nd mode - TX +RX
+//  SSISlave->TXFTLR = 0x01;  // number of entries at which the TX interrupt triggers
+//  SSISlave->RXFTLR = 0x01;
+////  SSISlave->IMR |= RXFIM;
+//
+//  SSISlave->SSIENR = 1;   // Re-enable peripheral
+////  int tx_size = sizeof(data_out);
+////  if (tx_size > 16) tx_size = 16; // 16 is MAX_SIZE_TX_FIFO - to define it
+//  while ((tx_index < tx_length) && (SSISlave->TXFLR < 16)) {
+//          SSISlave->DR = data_out[tx_index++];
+////          printf("Data to send is %02x\r\n",data_out[tx_index++]);
+//      }
 
-  // Set configuration based on datasheet
-  SSISlave->CTRLR0_b.SCPOL = 0;
-  SSISlave->CTRLR0_b.SCPH = 0;
-  SSISlave->CTRLR0_b.TMOD = 0x00; // 2nd mode - TX ONLY
-  SSISlave->TXFTLR = 0x0A;  // number of entries at which the TX interrupt triggers
-  SSISlave->IMR = 0x01; // mask / enable interrupt on empty TX FIFO // should have yused the _b struct, but SPI.h redefines TXEIM element as a macro / either way we only need the first bit set as 1
+
+  // enable now because we need to preload data
+//  SSISlave->IMR |= TXEIM; // mask / enable interrupt on empty TX FIFO // should have yused the _b struct, but SPI.h redefines TXEIM element as a macro / either way we only need the first bit set as 1
+
+//  NVIC_EnableIRQ(44); // check your IRQ number
 
 
-  SSISlave->SSIENR = 1;   // Re-enable peripheral
 
-  NVIC_EnableIRQ(44); // check your IRQ number
-  int tx_size = sizeof(data_out);
-      if (tx_size > 16) tx_size = 16; // 16 is MAX_SIZE_TX_FIFO - to define it
-  for (int i = 0; i < tx_size; i++) {
-      SSISlave->DR = data_out[i];
-      printf("Data to send is %02x\r\n",data_out[i]);
-  }
+  status = sl_si91x_ssi_transfer_data(ssi_handle, (void *) data_out,(void *) data_in, sizeof(data_out));
+  printf("Send SPI funciton\r\n");
+  if (status != SL_STATUS_OK) {
+            printf("SEND Failed \%ld\r\n", status);
+        }
+}
 
-
-//  status = sl_si91x_ssi_send_data(ssi_handle, (void *) data_out, sizeof(data_out));
-//  if (status != SL_STATUS_OK) {
-//            printf("SEND Failed \%ld\r\n", status);
+//void IRQ044_Handler(void)
+//{
+//    printf("reaching IRQ\r\n");
+//
+////// If received byte is 0xAA → prepare for send
+////    if (SSISlave->RISR & RXFIM) {
+////        uint8_t rx_byte = SSISlave->DR;
+////        if (rx_byte == 0xBB) {
+////            printf("CMD in IRQ\r\n");
+////            send_spi();   // preload + enable TXEIM
+////        }
+////    }
+//////    // Check if TXEIM (TX FIFO empty interrupt) is active
+//    if (SSISlave->RISR & TXEIM)   // raw interrupt status
+//    {
+//        printf("Interrupt TXEIM\r\n");
+//        // Refill FIFO if data left
+//        if (tx_index < tx_length)
+//        {
+//            // Push next byte
+//            SSISlave->DR = data_out[tx_index++];
+//            printf("Filling FIFO\r\n");
 //        }
-}
-void IRQ044_Handler(void) {
-
-}
+//        else
+//        {
+//            // No more data → disable TXEIM interrupt to stop further IRQs
+//            SSISlave->IMR &= ~TXEIM;
+//
+//            // Optionally clear interrupt flags (not needed on Si917 but safe)
+//            // (no explicit clear needed for RISR)
+//
+//            // Optional: trigger end of transfer signal to master if needed
+//        }
+//    }
+//}
 int validate_checksum(spi_frame_t *frame)
 {
   spi_frame_t temp_frame = *frame;
@@ -248,6 +272,7 @@ void process_frame(spi_frame_t *frame)
 }
 void spi_rx_handler(uint8_t rx_byte)
 {
+  printf("reached rx_handler\r\n");
     switch (spi_ctx.state) {
         case WAIT_HEADER:
             if (rx_byte == HEADER) {
@@ -257,6 +282,7 @@ void spi_rx_handler(uint8_t rx_byte)
             break;
 
         case WAIT_LENGTH:
+            if (rx_byte == 0) { spi_ctx.state = WAIT_HEADER; break;}
             spi_ctx.frame.payload_length = rx_byte;
             spi_ctx.payload_counter = 0;
             spi_ctx.state = WAIT_PAYLOAD;
@@ -292,19 +318,29 @@ void spi_rx_task()
             while (ring_buffer_get(&byte)) {
                 spi_rx_handler(byte);
                 printf("Function for handling RECEIVE\r\n");
-                read_spi();
+//
+                if (byte == 0xBB)
+                  {
+                    printf("Byte print %02x\r\n",byte);
+                    spi_mode = SPI_MODE_SEND;
+                    send_spi();
+                  }
+//                read_spi();
             }
           } else {
 //           handle stuff if needed
                           // modify isr for type of send or receive handleing
-                send_spi();
+//                send_spi();
                 spi_data_ready = false;
+                spi_mode = SPI_MODE_RECEIVE;
+                read_spi();
                 printf("Function for handling SEND\r\n");
 
           }
       }
     }
 }
+
 
 
 

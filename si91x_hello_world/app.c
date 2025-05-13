@@ -45,6 +45,7 @@ void app_init(void)
   }
 
   xTaskCreate(spi_rx_task, "SPI_RX", SPI_RX_TASK_STACK_SIZE, NULL, SPI_RX_TASK_PRIORITY, NULL);
+//  xTaskCreate(spi_manual, "SPI_manual", SPI_RX_TASK_STACK_SIZE, NULL, SPI_RX_TASK_PRIORITY, NULL);
 
   init_spi_slave();  // Start SPI and arm first RX
 }

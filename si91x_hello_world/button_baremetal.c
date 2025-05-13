@@ -61,7 +61,7 @@
 /*******************************************************************************
  **************************   GLOBAL FUNCTIONS   *******************************
  ******************************************************************************/
- uint8_t data_out[10] = { 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc, 0x33, 0x44, 0x55, 0x66 };
+ uint8_t data_out[10] = {0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc, 0x33  };
 //uint8_t data_out[10] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l'};
 /*******************************************************************************
  **************************   GLOBAL VARIABLES   *******************************
@@ -89,7 +89,8 @@ void sl_si91x_button_isr(uint8_t pin, int8_t state)
     if (state == BUTTON_PRESSED) {
 #ifndef SI917_DEVKIT
       sl_si91x_led_toggle(LED_INSTANCE.pin);
-      send_spi();
+//      send_spi();
+//      read_spi();
       gpio_example_process_action();
       // Flags to be set to run the instance each time
 //      transfer_complete = false;
