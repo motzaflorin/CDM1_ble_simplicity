@@ -183,7 +183,20 @@ volatile spi_mode_t spi_mode = SPI_MODE_IDLE;
    spi_ctx.state = WAIT_HEADER;
    spi_ctx.payload_counter = 0;
    spi_mode = SPI_MODE_RECEIVE; // SPI_MODE_SEND;
+<<<<<<< HEAD
    read_spi();
+=======
+//   SSISlave->SSIENR = 0;   // disable
+//   SSISlave->SSIENR = 1;   // re-enable
+//   // Re-arm interrupts
+//   SSISlave->IMR = 0;
+//   SSISlave->IMR |= RXFIM;    // enable RX interrupt only
+
+//   send_spi();
+//   read_spi();
+//   read_spi();
+//   gpio_example_process_action();
+>>>>>>> 57ec5a07317621f7b9bd9a0368f8e69c016cca9b
 
  }
 //void read_spi() // works is validated
@@ -208,6 +221,7 @@ volatile int tx_index = 0;            // global index for current send position
 volatile int tx_length = 10;          // set to your current data length
 void send_spi()
 {
+<<<<<<< HEAD
 
   sl_status_t status;
   SSISlave->CTRLR0_b.DFS = 15;
@@ -229,6 +243,47 @@ void send_spi()
 //  tx_index = 0;
 //  tx_length = sizeof(data_out);
 //
+=======
+////  tx_index = 0;
+////  spi_data_ready = true;
+//////  test_fill_tx_fifo();
+  sl_status_t status;
+//  SSISlave->SSIENR = 0;   // Disable peripheral → clears internal FIFOs
+//
+//  // Set configuration based on datasheet
+//  SSISlave->CTRLR0_b.SCPOL = 0;
+//  SSISlave->CTRLR0_b.SCPH = 0;
+//  SSISlave->CTRLR0_b.TMOD = 0x00; // 2nd mode - TX +RX
+//  SSISlave->TXFTLR = 0x01;  // number of entries at which the TX interrupt triggers
+//  SSISlave->RXFTLR = 0x01;
+//////  SSISlave->IMR |= RXFIM;
+////
+//  SSISlave->SSIENR = 1;   // Re-enable peripheral
+//////  int tx_size = sizeof(data_out);
+//////  if (tx_size > 16) tx_size = 16; // 16 is MAX_SIZE_TX_FIFO - to define it
+////  while ((tx_index < tx_length) && (SSISlave->TXFLR < 16)) {
+////          SSISlave->DR = data_out[tx_index++];
+//////          printf("Data to send is %02x\r\n",data_out[tx_index++]);
+////      }
+//
+//
+//  // enable now because we need to preload data
+//  SSISlave->IMR |= TXEIM; // mask / enable interrupt on empty TX FIFO // should have yused the _b struct, but SPI.h redefines TXEIM element as a macro / either way we only need the first bit set as 1
+//
+////  NVIC_EnableIRQ(44); // check your IRQ number
+
+
+//
+  status = sl_si91x_ssi_send_data(ssi_handle, (void *) data_out, sizeof(data_out));
+  printf("Send SPI funciton\r\n");
+  if (status != SL_STATUS_OK) {
+            printf("SEND Failed \%ld\r\n", status);
+        }
+
+//  tx_index = 0;
+//  tx_length = sizeof(data_out);
+//
+>>>>>>> 57ec5a07317621f7b9bd9a0368f8e69c016cca9b
 //  while ((tx_index < tx_length) && (SSISlave->TXFLR < 16)) {
 //      SSISlave->DR = data_out[tx_index++];
 ////      printf("DATA in fifo buffer %02x\r\n",SSISlave->DR );
