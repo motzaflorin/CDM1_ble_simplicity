@@ -98,6 +98,7 @@ void gpio_example_init(void)
  ******************************************************************************/
 void gpio_example_process_action(void)
 {
+  // Arm spi at button press
   read_spi();
   // Initialize GPIO HP instance
   sl_gpio_clear_pin_output(PORT0, OUTPUT_TRIG_PIN);

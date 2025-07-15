@@ -20,6 +20,7 @@ SUBDIRS := \
 autogen \
 simplicity_sdk_2024.12.2/platform/CMSIS/RTOS2/Source \
 simplicity_sdk_2024.12.2/platform/common/src \
+simplicity_sdk_2024.12.2/platform/emlib/src \
 simplicity_sdk_2024.12.2/platform/service/sleeptimer/src \
 simplicity_sdk_2024.12.2/platform/service/system/src \
 simplicity_sdk_2024.12.2/util/third_party/freertos/cmsis/Source \
@@ -27,6 +28,7 @@ simplicity_sdk_2024.12.2/util/third_party/freertos/kernel \
 simplicity_sdk_2024.12.2/util/third_party/freertos/kernel/portable/GCC/ARM_CM4F \
 simplicity_sdk_2024.12.2/util/third_party/freertos/kernel/portable/MemMang \
 wiseconnect3_sdk_3.4.1/components/board/silabs/src \
+wiseconnect3_sdk_3.4.1/components/common/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src/iPMU_prog/iPMU_dotc \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/chip/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/core/common/src \
@@ -41,4 +43,13 @@ wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/service/sleept
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/systemlevel/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_api/src \
 wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/mcu/drivers/unified_peripheral_drivers/src \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/wireless/ahb_interface/src \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/wireless/ble/src \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/wireless/errno/src \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/wireless/host_mcu/si91x \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/wireless/memory \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/wireless/src \
+wiseconnect3_sdk_3.4.1/components/device/silabs/si91x/wireless/threading \
+wiseconnect3_sdk_3.4.1/components/protocol/wifi/si91x \
+wiseconnect3_sdk_3.4.1/components/protocol/wifi/src \
 

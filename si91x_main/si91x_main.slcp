@@ -22,6 +22,7 @@ toolchain_settings:
 - {value: -Wall -Werror, option: gcc_compiler_option}
 component:
 - {from: wiseconnect3_sdk, id: SIWG917M111MGTBA}
+- {from: wiseconnect3_sdk, id: ble}
 - {from: wiseconnect3_sdk, id: brd4338a}
 - {from: wiseconnect3_sdk, id: si91x_memory_default_config}
 - instance: [btn0]
@@ -35,6 +36,8 @@ component:
   id: sl_ssi_instance
 - {from: wiseconnect3_sdk, id: sleeptimer_si91x}
 - {from: wiseconnect3_sdk, id: syscalls}
+- {from: wiseconnect3_sdk, id: wifi}
+- {from: wiseconnect3_sdk, id: wifi_resources}
 - {id: brd4002a}
 - {id: freertos_kernel_cortexm}
 - {id: sl_system}

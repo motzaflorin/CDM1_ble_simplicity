@@ -22,15 +22,32 @@
 #include "task.h"
 #include "spi_app_layer.h"
 #include "gpio_example.h"
+#include "cmsis_os2.h" // needed for threads
+#include "BLE_services.h"
 
 /*******************************************************************************
  * Initialize application.
  ******************************************************************************/
 
 SemaphoreHandle_t spi_rx_sem;
+extern void ble_heart_rate_gatt_server(void *argument);
 
 void app_init(void)
 {
+  const osThreadAttr_t thread_attributes = {
+    .name       = "application_thread",
+    .attr_bits  = 0,
+    .cb_mem     = 0,
+    .cb_size    = 0,
+    .stack_mem  = 0,
+    .stack_size = 3072,
+    .priority   = osPriorityNormal,
+    .tz_module  = 0,
+    .reserved   = 0,
+  };
+  // =========== BLE INIT & ADVERTISE =============
+  osThreadNew((osThreadFunc_t)ble_heart_rate_gatt_server, NULL, &thread_attributes);
+
   // =========== GPIO INIT =============
   gpio_example_init();
   //===================
@@ -45,7 +62,7 @@ void app_init(void)
   }
 
   xTaskCreate(spi_rx_task, "SPI_RX", SPI_RX_TASK_STACK_SIZE, NULL, SPI_RX_TASK_PRIORITY, NULL);
-//  xTaskCreate(spi_manual, "SPI_manual", SPI_RX_TASK_STACK_SIZE, NULL, SPI_RX_TASK_PRIORITY, NULL);
+
 
   init_spi_slave();  // Start SPI and arm first RX
 }

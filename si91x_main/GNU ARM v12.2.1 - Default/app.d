@@ -52,7 +52,9 @@ app.o: ../app.c ../app.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\core\chip\inc\rsi_ccp_common.h \
  C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_main\autogen/sl_ssi_common_config.h \
  C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_main\config/sl_si91x_ssi_secondary_common_config.h \
- ../gpio_example.h
+ ../gpio_example.h \
+ c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\rtos2\include\cmsis_os2.h \
+ ../BLE_services.h
 ../app.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\util\third_party\freertos\kernel\include\freertos.h:
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_main\config/FreeRTOSConfig.h:
@@ -108,3 +110,5 @@ c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_main\autogen/sl_ssi_common_config.h:
 C:\Users\florin.mota\SimplicityStudio\v5_workspace\si91x_main\config/sl_si91x_ssi_secondary_common_config.h:
 ../gpio_example.h:
+c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\rtos2\include\cmsis_os2.h:
+../BLE_services.h:

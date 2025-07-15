@@ -105,8 +105,17 @@
                     <file name="rsi_rom_crc.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_crc.h"/>
                     <file name="rsi_rom_egpio.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_egpio.h"/>
                     <file name="rsi_packing.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_packing.h"/>
-                    <file name="rsi_rom_table_si91x.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_table_si91x.h"/>
+                    <file name="rsi_rom_ct.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_ct.h"/>
+                    <file name="rsi_rom_efuse.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_efuse.h"/>
+                    <file name="rsi_rom_fim.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_fim.h"/>
+                    <file name="rsi_rom_gpdma.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_gpdma.h"/>
+                    <file name="rsi_rom_power_save.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_power_save.h"/>
+                    <file name="rsi_rom_pwm.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_pwm.h"/>
+                    <file name="rsi_rom_qspi.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_qspi.h"/>
+                    <file name="rsi_rom_rng.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_rng.h"/>
                     <file name="rsi_rom_table_RS1xxxx.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_table_RS1xxxx.h"/>
+                    <file name="rsi_rom_table_si91x.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_table_si91x.h"/>
+                    <file name="rsi_rom_timer.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_timer.h"/>
                     <file name="rsi_rom_udma.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_udma.h"/>
                     <file name="rsi_rom_udma_wrapper.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_udma_wrapper.h"/>
                     <file name="rsi_rom_ulpss_clk.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc/rsi_rom_ulpss_clk.h"/>
@@ -265,6 +274,107 @@
                 </folder>
               </folder>
             </folder>
+            <folder name="wireless">
+              <folder name="ble">
+                <folder name="src">
+                  <file name="rsi_ble_gap_apis.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_ble_gap_apis.c"/>
+                  <file name="rsi_ble_gatt_apis.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_ble_gatt_apis.c"/>
+                  <file name="rsi_bt_common_apis.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_bt_common_apis.c"/>
+                  <file name="rsi_bt_ble.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_bt_ble.c"/>
+                  <file name="rsi_common_apis.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_common_apis.c"/>
+                  <file name="rsi_utils.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/rsi_utils.c"/>
+                  <file name="sl_si91x_ble.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/src/sl_si91x_ble.c"/>
+                </folder>
+                <folder name="inc">
+                  <file name="rsi_ble_apis.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_ble_apis.h"/>
+                  <file name="rsi_ble_common_config.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_ble_common_config.h"/>
+                  <file name="rsi_ble.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_ble.h"/>
+                  <file name="rsi_bt_common_apis.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_bt_common_apis.h"/>
+                  <file name="rsi_bt_common_config.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_bt_common_config.h"/>
+                  <file name="rsi_bt_common.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_bt_common.h"/>
+                  <file name="rsi_common_apis.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_common_apis.h"/>
+                  <file name="rsi_common.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_common.h"/>
+                  <file name="rsi_user.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_user.h"/>
+                  <file name="rsi_utils.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/rsi_utils.h"/>
+                  <file name="sl_si91x_ble.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc/sl_si91x_ble.h"/>
+                </folder>
+              </folder>
+              <folder name="memory">
+                <file name="malloc_buffers.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/memory/malloc_buffers.c"/>
+              </folder>
+              <folder name="errno">
+                <folder name="src">
+                  <file name="sl_si91x_errno.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/errno/src/sl_si91x_errno.c"/>
+                </folder>
+                <folder name="inc">
+                  <file name="errno.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/errno/inc/errno.h"/>
+                </folder>
+              </folder>
+              <folder name="src">
+                <file name="sl_si91x_driver.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/src/sl_si91x_driver.c"/>
+                <file name="sl_rsi_utility.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/src/sl_rsi_utility.c"/>
+              </folder>
+              <folder name="threading">
+                <file name="sli_si91x_multithreaded.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/threading/sli_si91x_multithreaded.c"/>
+              </folder>
+              <folder name="host_mcu">
+                <folder name="si91x">
+                  <file name="siwx917_soc_ncp_host.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/host_mcu/si91x/siwx917_soc_ncp_host.c"/>
+                </folder>
+              </folder>
+              <folder name="ahb_interface">
+                <folder name="src">
+                  <file name="rsi_hal_mcu_m4_ram.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/src/rsi_hal_mcu_m4_ram.c"/>
+                  <file name="sl_platform.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/src/sl_platform.c"/>
+                  <file name="sl_platform_wireless.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/src/sl_platform_wireless.c"/>
+                  <file name="sl_si91x_bus.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/src/sl_si91x_bus.c"/>
+                  <file name="sli_siwx917_soc.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/src/sli_siwx917_soc.c"/>
+                  <file name="rsi_hal_mcu_m4_rom.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/src/rsi_hal_mcu_m4_rom.c"/>
+                  <file name="sl_si91x_timer.c" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/src/sl_si91x_timer.c"/>
+                </folder>
+                <folder name="inc">
+                  <file name="rsi_common.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_common.h"/>
+                  <file name="rsi_data_types.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_data_types.h"/>
+                  <file name="rsi_driver.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_driver.h"/>
+                  <file name="rsi_m4.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_m4.h"/>
+                  <file name="rsi_os.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_os.h"/>
+                  <file name="rsi_pkt_mgmt.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_pkt_mgmt.h"/>
+                  <file name="rsi_user.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_user.h"/>
+                  <file name="rsi_wisemcu_hardware_setup.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_wisemcu_hardware_setup.h"/>
+                  <file name="rsi_wlan_common_config.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_wlan_common_config.h"/>
+                  <file name="rsi_wlan_defines.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/rsi_wlan_defines.h"/>
+                  <file name="sli_siwx917_soc.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/sli_siwx917_soc.h"/>
+                  <file name="sli_siwx917_timer.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/sli_siwx917_timer.h"/>
+                  <file name="sl_device.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc/sl_device.h"/>
+                </folder>
+              </folder>
+              <folder name="inc">
+                <file name="sl_rsi_utility.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_rsi_utility.h"/>
+                <file name="sl_si91x_constants.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_constants.h"/>
+                <file name="sl_si91x_core_utilities.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_core_utilities.h"/>
+                <file name="sl_si91x_driver.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_driver.h"/>
+                <file name="sl_si91x_host_interface.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_host_interface.h"/>
+                <file name="sl_si91x_iot_socket.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_iot_socket.h"/>
+                <file name="sl_si91x_protocol_types.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_protocol_types.h"/>
+                <file name="sl_si91x_spi_constants.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_spi_constants.h"/>
+                <file name="sl_si91x_status.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_status.h"/>
+                <file name="sl_si91x_types.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_si91x_types.h"/>
+                <file name="sl_wifi_device.h" uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/sl_wifi_device.h"/>
+              </folder>
+            </folder>
+          </folder>
+        </folder>
+      </folder>
+      <folder name="service">
+        <folder name="bsd_socket">
+          <folder name="inc">
+            <file name="netdb.h" uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc/netdb.h"/>
+            <file name="netinet_in.h" uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc/netinet_in.h"/>
+            <file name="netinet6_in6.h" uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc/netinet6_in6.h"/>
+            <file name="select.h" uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc/select.h"/>
+            <file name="socket.h" uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc/socket.h"/>
+            <file name="sys.h" uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc/sys.h"/>
+            <file name="uio.h" uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc/uio.h"/>
           </folder>
         </folder>
       </folder>
@@ -285,6 +395,64 @@
           </folder>
         </folder>
       </folder>
+      <folder name="protocol">
+        <folder name="wifi">
+          <folder name="src">
+            <file name="sl_wifi_callback_framework.c" uri="studio:/sdk/extension/wiseconnect/components/protocol/wifi/src/sl_wifi_callback_framework.c"/>
+          </folder>
+          <folder name="si91x">
+            <file name="sl_wifi.c" uri="studio:/sdk/extension/wiseconnect/components/protocol/wifi/si91x/sl_wifi.c"/>
+          </folder>
+          <folder name="inc">
+            <file name="sl_wifi_callback_framework.h" uri="studio:/sdk/extension/wiseconnect/components/protocol/wifi/inc/sl_wifi_callback_framework.h"/>
+            <file name="sl_wifi_constants.h" uri="studio:/sdk/extension/wiseconnect/components/protocol/wifi/inc/sl_wifi_constants.h"/>
+            <file name="sl_wifi_host_interface.h" uri="studio:/sdk/extension/wiseconnect/components/protocol/wifi/inc/sl_wifi_host_interface.h"/>
+            <file name="sl_wifi_types.h" uri="studio:/sdk/extension/wiseconnect/components/protocol/wifi/inc/sl_wifi_types.h"/>
+            <file name="sl_wifi.h" uri="studio:/sdk/extension/wiseconnect/components/protocol/wifi/inc/sl_wifi.h"/>
+          </folder>
+        </folder>
+      </folder>
+      <folder name="common">
+        <folder name="src">
+          <file name="sl_utility.c" uri="studio:/sdk/extension/wiseconnect/components/common/src/sl_utility.c"/>
+        </folder>
+        <folder name="inc">
+          <file name="sl_additional_status.h" uri="studio:/sdk/extension/wiseconnect/components/common/inc/sl_additional_status.h"/>
+          <file name="sl_cmsis_utility.h" uri="studio:/sdk/extension/wiseconnect/components/common/inc/sl_cmsis_utility.h"/>
+          <file name="sl_constants.h" uri="studio:/sdk/extension/wiseconnect/components/common/inc/sl_constants.h"/>
+          <file name="sl_ieee802_types.h" uri="studio:/sdk/extension/wiseconnect/components/common/inc/sl_ieee802_types.h"/>
+          <file name="sl_ip_types.h" uri="studio:/sdk/extension/wiseconnect/components/common/inc/sl_ip_types.h"/>
+          <file name="sl_utility.h" uri="studio:/sdk/extension/wiseconnect/components/common/inc/sl_utility.h"/>
+        </folder>
+      </folder>
+    </folder>
+    <folder name="resources">
+      <folder name="certificates">
+        <file name="aws_client_certificate.pem.crt.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/aws_client_certificate.pem.crt.h"/>
+        <file name="aws_client_private_key.pem.key.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/aws_client_private_key.pem.key.h"/>
+        <file name="aws_starfield_ca.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/aws_starfield_ca.pem.h"/>
+        <file name="azure_baltimore_ca.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/azure_baltimore_ca.pem.h"/>
+        <file name="cacert.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/cacert.pem.h"/>
+        <file name="clientcert.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/clientcert.pem.h"/>
+        <file name="clientkey.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/clientkey.pem.h"/>
+        <file name="servercert.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/servercert.pem.h"/>
+        <file name="serverkey.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/serverkey.pem.h"/>
+        <file name="wifiuser.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/wifiuser.pem.h"/>
+        <file name="silabs_client_cert.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/silabs_client_cert.pem.h"/>
+        <file name="silabs_client_key.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/silabs_client_key.pem.h"/>
+        <file name="mydevkitcertificate.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/mydevkitcertificate.pem.h"/>
+        <file name="mydevkitkey.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/mydevkitkey.pem.h"/>
+        <file name="silabs_dgcert_ca.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/silabs_dgcert_ca.pem.h"/>
+        <file name="eap.pem.h" uri="studio:/sdk/extension/wiseconnect/resources/certificates/eap.pem.h"/>
+      </folder>
+      <folder name="html">
+        <file name="login.h" uri="studio:/sdk/extension/wiseconnect/resources/html/login.h"/>
+        <file name="helloworld.h" uri="studio:/sdk/extension/wiseconnect/resources/html/helloworld.h"/>
+        <file name="provisioning.h" uri="studio:/sdk/extension/wiseconnect/resources/html/provisioning.h"/>
+      </folder>
+      <folder name="other">
+        <file name="index.html.h" uri="studio:/sdk/extension/wiseconnect/resources/other/index.html.h"/>
+      </folder>
     </folder>
   </folder>
   <folder name="simplicity_sdk_2024.12.2">
@@ -292,20 +460,27 @@
       <folder name="common">
         <folder name="inc">
           <file name="sl_atomic.h" uri="studio:/sdk/platform/common/inc/sl_atomic.h"/>
+          <file name="sl_bit.h" uri="studio:/sdk/platform/common/inc/sl_bit.h"/>
           <file name="sl_cmsis_os2_common.h" uri="studio:/sdk/platform/common/inc/sl_cmsis_os2_common.h"/>
+          <file name="sli_cmsis_os2_ext_task_register.h" uri="studio:/sdk/platform/common/inc/sli_cmsis_os2_ext_task_register.h"/>
           <file name="sl_code_classification.h" uri="studio:/sdk/platform/common/inc/sl_code_classification.h"/>
           <file name="sli_code_classification.h" uri="studio:/sdk/platform/common/inc/sli_code_classification.h"/>
           <file name="sl_assert.h" uri="studio:/sdk/platform/common/inc/sl_assert.h"/>
           <file name="sl_common.h" uri="studio:/sdk/platform/common/inc/sl_common.h"/>
           <file name="sl_compiler.h" uri="studio:/sdk/platform/common/inc/sl_compiler.h"/>
           <file name="sl_core.h" uri="studio:/sdk/platform/common/inc/sl_core.h"/>
+          <file name="sl_string.h" uri="studio:/sdk/platform/common/inc/sl_string.h"/>
+          <file name="sl_slist.h" uri="studio:/sdk/platform/common/inc/sl_slist.h"/>
           <file name="sl_status.h" uri="studio:/sdk/platform/common/inc/sl_status.h"/>
         </folder>
         <folder name="src">
           <file name="sl_cmsis_os2_common.c" uri="studio:/sdk/platform/common/src/sl_cmsis_os2_common.c"/>
+          <file name="sli_cmsis_os2_ext_task_register.c" uri="studio:/sdk/platform/common/src/sli_cmsis_os2_ext_task_register.c"/>
           <file name="sl_assert.c" uri="studio:/sdk/platform/common/src/sl_assert.c"/>
           <file name="sl_core_cortexm.c" uri="studio:/sdk/platform/common/src/sl_core_cortexm.c"/>
+          <file name="sl_string.c" uri="studio:/sdk/platform/common/src/sl_string.c"/>
           <file name="sl_syscalls.c" uri="studio:/sdk/platform/common/src/sl_syscalls.c"/>
+          <file name="sl_slist.c" uri="studio:/sdk/platform/common/src/sl_slist.c"/>
         </folder>
       </folder>
       <folder name="CMSIS">
@@ -327,6 +502,15 @@
           <folder name="Source">
             <file name="os_systick.c" uri="studio:/sdk/platform/CMSIS/RTOS2/Source/os_systick.c"/>
           </folder>
+        </folder>
+      </folder>
+      <folder name="emlib">
+        <folder name="src">
+          <file name="em_core.c" uri="studio:/sdk/platform/emlib/src/em_core.c"/>
+        </folder>
+        <folder name="inc">
+          <file name="em_core.h" uri="studio:/sdk/platform/emlib/inc/em_core.h"/>
+          <file name="em_core_generic.h" uri="studio:/sdk/platform/emlib/inc/em_core_generic.h"/>
         </folder>
       </folder>
       <folder name="service">
@@ -415,6 +599,8 @@
   <excludedPath>resources/readme/setupdiagram.png</excludedPath>
   <excludedPath>resources/readme/outputConsole.png</excludedPath>
   <includePath uri="studio:/project/"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ble/inc"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/service/bsd_socket/inc"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/cmsis_driver/CMSIS/Driver/Include"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/cmsis_driver"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/rom_driver/inc"/>
@@ -427,12 +613,23 @@
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/service/clock_manager/inc"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/unified_peripheral_drivers/inc"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/hardware_drivers/button/inc"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/errno/inc"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/hardware_drivers/led/inc"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/inc/mqtt/inc"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/wireless/ahb_interface/inc"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/service/sleeptimer/inc"/>
   <includePath uri="studio:/sdk/extension/wiseconnect/components/device/silabs/si91x/mcu/drivers/systemlevel/inc"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/protocol/wifi/inc"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/resources/defaults"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/resources/certificates"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/resources/html"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/resources/other"/>
+  <includePath uri="studio:/sdk/extension/wiseconnect/components/common/inc"/>
   <includePath uri="studio:/sdk/platform/common/inc"/>
   <includePath uri="studio:/sdk/platform/CMSIS/Core/Include"/>
   <includePath uri="studio:/sdk/platform/CMSIS/RTOS2/Include"/>
+  <includePath uri="studio:/sdk/platform/emlib/inc"/>
   <includePath uri="studio:/sdk/util/third_party/freertos/kernel/include"/>
   <includePath uri="studio:/sdk/util/third_party/freertos/cmsis/Include"/>
   <includePath uri="studio:/sdk/util/third_party/freertos/kernel/portable/GCC/ARM_CM4F"/>
@@ -443,6 +640,8 @@
   <macroDefinition name="SLI_SI917B0" value="1"/>
   <macroDefinition name="SLI_SI91X_MCU_ENABLE_FLASH_BASED_EXECUTION" value="1"/>
   <macroDefinition name="SLI_SI91X_MCU_EXTERNAL_LDO_FOR_PSRAM" value="1"/>
+  <macroDefinition name="SLI_SI91X_ENABLE_BLE"/>
+  <macroDefinition name="SL_SI91X_ENABLE_LITTLE_ENDIAN"/>
   <macroDefinition name="SLI_SI91X_MCU_COMMON_FLASH_MODE" value="1"/>
   <macroDefinition name="SLI_SI91X_MCU_CONFIG_RADIO_BOARD_BASE_VER" value="1"/>
   <macroDefinition name="SLI_SI91X_MCU_CONFIG_RADIO_BOARD_VER2" value="1"/>
@@ -467,6 +666,7 @@
   <macroDefinition name="SLI_SI91X_ENABLE_OS"/>
   <macroDefinition name="SLI_SI91X_MCU_INTERFACE"/>
   <macroDefinition name="TA_DEEP_SLEEP_COMMON_FLASH"/>
+  <macroDefinition name="SLI_SI917"/>
   <macroDefinition name="SL_SI91X_REQUIRES_INTF_PLL"/>
   <macroDefinition name="SL_SI91X_SSI_DMA"/>
   <macroDefinition name="SSI_CONFIG"/>
@@ -476,8 +676,10 @@
   <macroDefinition name="SL_SLEEP_TIMER"/>
   <macroDefinition name="__WEAK" value="__attribute__((weak))"/>
   <macroDefinition name="PLL_ROMDRIVER_PRESENT"/>
+  <macroDefinition name="SL_WIFI_COMPONENT_INCLUDED"/>
   <macroDefinition name="SL_BOARD_NAME" value="&quot;BRD4002A&quot;"/>
   <macroDefinition name="SL_BOARD_REV" value="&quot;A07&quot;"/>
+  <macroDefinition name="configNUM_SDK_THREAD_LOCAL_STORAGE_POINTERS" value="2"/>
   <macroDefinition name="SL_COMPONENT_CATALOG_PRESENT"/>
   <macroDefinition name="SL_CODE_COMPONENT_FREERTOS_KERNEL" value="freertos_kernel"/>
   <macroDefinition name="SL_CODE_COMPONENT_CORE" value="core"/>
