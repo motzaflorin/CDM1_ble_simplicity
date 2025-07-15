@@ -90,6 +90,8 @@
 //static bool notify_enabled                      = false;
 //static uint8_t conn_handle                      = 0xFF;
 
+uint16_t cccd_value = 0; // global ecg cccd value
+
 
 
 
@@ -125,7 +127,7 @@
 #define RSI_BLE_GATT_SEND_DATA                0x08
 #define RSI_APP_EVENT_PHY_UPDATE_COMPLETE     0x09
 #define RSI_BLE_COMMAND_SET_PHY               0x0A
-#define RSI_BLE_GATT_SEND_DATA_custom               0x0B
+#define RSI_BLE_GATT_SEND_DATA_custom         0x0B
 
 #define BLE_2M_PHY 0x02
 #define BLE_1M_PHY 0x01
@@ -800,11 +802,14 @@ static void rsi_ble_on_gatt_write_event(uint16_t event_id, rsi_ble_event_write_t
   }
   // our custom ecg service char handle
   if ((ecg_char_val_handle + 1) == *((uint16_t *)app_ble_write_event.handle)) {
+      cccd_value = app_ble_write_event.att_value[0] | (app_ble_write_event.att_value[1] << 8);
      if (app_ble_write_event.att_value[0] == 1) {
        notify_start = true;
+       printf("Notifications ENABLED\n");
        rsi_ble_app_set_event(RSI_BLE_GATT_SEND_DATA_custom);
      } else if (app_ble_write_event.att_value[0] == 0) {
        notify_start = false;
+       printf("Notifications DISABLED\n");
        rsi_ble_app_clear_event(RSI_BLE_GATT_SEND_DATA_custom);
      }
    }
@@ -934,7 +939,7 @@ uint8_t heartratefun(heart_rate_t rate, uint8_t *p_data)
 uint8_t custom_service_data_function(uint8_t *p_data)
 {
 //  printf("GPIO toggle from notify characteristic!\r\n");
-  gpio_example_process_action();
+//  gpio_example_process_action();
   *p_data =  (rand() % 100); // 0–99%
   return 0;
 }
@@ -1166,27 +1171,33 @@ adv:
       } break;
       case RSI_BLE_GATT_SEND_DATA_custom: {
 
-              printf("reached case custom\r\n");
+//              printf("reached custom case\r\n");
               if (connected == true) {
                 if (notify_start == true) {
+                    //comment this block for continuous call of custom funciton
+                    // ======================================
 //                  if (attribute_handle == ecg_cccd_handle) {
-//                          uint16_t value = *(uint16_t *)write_value;
-//
-//                          if (value == 0x0001 && notify_start == false) {
-//                              notify_start = true;
-//                              printf("Notifications enabled\n");
-//
-//                              // Trigger master once
-//                              gpio_example_process_action();  // Only called here, once
-//
-//                          } else if (value == 0x0000) {
-//                              notify_start = false;
-//                              printf("Notifications disabled\n");
-//                          }
-//                      }
+                  uint16_t value = cccd_value;
+//                  printf("CCCD value is %d\r\n", cccd_value);
+
+                  if (value == 0x0001 && notify_start == true) {
+                      notify_start = false;
+                      printf("Notifications enabled\n");
+
+                      // Trigger master once
+                      gpio_example_process_action();  // Only called here, once
+
+                  } else if (value == 0x0000) {
+                      notify_start = false;
+                      printf("Notifications disabled\n");
+                  }
+                  // =========================
                   custom_service_data_function((uint8_t *)data);
+                  // local update of GATT table - works on apps like nrfCONNECT and SIconnect that continuously poll the server
                   status = rsi_ble_set_local_att_value(ecg_char_val_handle, sizeof(uint8_t), (uint8_t *)data);
-                  uint8_t *rsi_connected_dev_addr = local_dev_addr;
+
+                  // this should be for notifications
+//                  uint8_t *rsi_connected_dev_addr = str_remote_address;
 //                  rsi_ble_notify_value(rsi_connected_dev_addr,
 //                                                  ecg_char_val_handle,
 //                                                  2,
