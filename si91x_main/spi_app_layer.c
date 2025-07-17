@@ -14,6 +14,7 @@
 #include "spi_sync.h"
 
 #include "BLE_services.h"
+#include "message_queue.h"
 
 static   void my_ssi_event_cb(uint32_t event);
 
@@ -187,8 +188,10 @@ void process_frame(spi_frame_t *frame)
   for (uint8_t i = 0; i < frame->payload_length; i++){
       printf("Data received is %0x\r\n",data_buff[i]);
   }
-  uint8_t data_buff_for_ble[MAX_PAYLOAD_SIZE] = {0};
-  memcpy(data_buff_for_ble, &(frame->payload), frame->payload_length);
+  // push for ble queue
+  if (!message_queue_push((frame->payload), frame->payload_length)) {
+      printf("Message queue full, dropped a frame!\n");
+  }
 }
 void spi_rx_handler(uint8_t rx_byte)
 {
@@ -238,8 +241,7 @@ void spi_rx_task()
         if (xSemaphoreTake(spi_rx_sem, portMAX_DELAY) == pdTRUE) {
             // Drain all received bytes
             while (ring_buffer_get(&byte)) {
-                spi_rx_handler(byte);  // state machine
-                printf("Function for handling  the state with byte %02x\r\n", byte);
+                spi_rx_handler(byte);  // Frame
             }
         }
     }

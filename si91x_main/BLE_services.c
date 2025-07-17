@@ -53,6 +53,7 @@
 #include "gpio_example.h"
 #include "BLE_services.h"
 #include "spi_app_layer.h"
+#include "message_queue.h"
 
 #include <time.h>
 
@@ -86,14 +87,6 @@
 //static uint16_t battery_char_val_att_handle      = 0;
 //static bool notify_enabled = false;
 //static uint16_t battery_level_cccd_handle       = 0;
-//
-//// State
-//uint8_t battery_level_value              = 75;
-//static bool notify_enabled                      = false;
-//static uint8_t conn_handle                      = 0xFF;
-
-uint16_t cccd_value = 0; // global ecg cccd value
-
 
 
 
@@ -205,6 +198,8 @@ uint16_t ecg_char_val_handle = 0;
 uint8_t number_of_entries = 0;
 
 uint8_t ring_buff_size = 0 ;
+uint8_t notify_buf[MAX_FRAME_SIZE];
+uint8_t notify_len = 0;
 /*=======================================================================*/
 //!    Powersave configurations
 /*=======================================================================*/
@@ -806,22 +801,11 @@ static void rsi_ble_on_gatt_write_event(uint16_t event_id, rsi_ble_event_write_t
   }
   // our custom ecg service char handle
   if ((ecg_char_val_handle + 1) == *((uint16_t *)app_ble_write_event.handle)) {
-      cccd_value = app_ble_write_event.att_value[0] | (app_ble_write_event.att_value[1] << 8);
      if (app_ble_write_event.att_value[0] == 1) {
        notify_start = true;
-       //
        printf("Notifications ENABLED\n");
        gpio_example_process_action();  // Only called here, once
-         //=================================
-//       uint8_t byte = 0;
-//       uint8_t ring_buff_size = ring_buffer_size();  // size is 0 here, why?
-//       printf("ring_buff_size is %d\r\n", ring_buff_size);
-//
-//        for (uint8_t i = 0; i < ring_buff_size; i++){
-//            ring_buffer_get(&byte);
-//            printf("Data received in CUSTOM CASE is %0x\r\n",byte);
-//            }
-       //=========================================
+
        rsi_ble_app_set_event(RSI_BLE_GATT_SEND_DATA_custom);
      } else if (app_ble_write_event.att_value[0] == 0) {
        notify_start = false;
@@ -950,27 +934,6 @@ uint8_t heartratefun(heart_rate_t rate, uint8_t *p_data)
   }
 
   return len;
-}
-
-uint8_t custom_service_data_function(uint8_t *p_data)
-{
-// HERE we should see what options we have to parse the date, either ring_buffer or callback funcitons
-  ring_buff_size = ring_buffer_size();  // size is 0 here, why?
-  printf("ring_buff_size is %d\r\n", ring_buff_size);
-
-  //
-  //                       for (uint8_t i = 0; i < ring_buff_size; i++){
-  //                           ring_buffer_get(&byte);
-  //                           printf("Data received in CUSTOM CASE is %0x\r\n",byte);
-  //                           }
-
-  number_of_entries += 1;
-  printf("Cusotm funciton entry no. %d\r\n", number_of_entries);
-//  *p_data =  (rand() % 100); // 0–99%
-  uint8_t byte = 0;
-  *p_data =  ring_buffer_get(&byte); // 0–99%
-  printf("Data in custom function = byte = %02x\r\n",byte);
-  return 0;
 }
 
 #ifdef SLI_SI91X_MCU_INTERFACE
@@ -1143,7 +1106,7 @@ void ble_heart_rate_gatt_server(void *argument)
         //! clear the served event
         rsi_ble_app_clear_event(RSI_BLE_CONN_EVENT);
         rsi_6byte_dev_address_to_ascii(str_remote_address, conn_event_to_app.dev_addr);
-        LOG_PRINT("\r\n Module connected to address : %s \r\n", str_remote_address);
+        printf("\r\n Module connected to address : %s \r\n", str_remote_address);
 
         connected = true;
 
@@ -1185,13 +1148,13 @@ adv:
          uint8_t byte = 0;
          uint8_t data[67] = {0};
          uint8_t ring_buff_size = ring_buffer_size();  // size is 0 here, why?
-         printf("ring_buff_size is %d\r\n", ring_buff_size);
+//         printf("ring_buff_size is %d\r\n", ring_buff_size);
 
 
          for (uint8_t i = 0; i < ring_buff_size; i++){
            ring_buffer_get(&byte);
            data[i] = byte;
-           printf("Data received in CUSTOM CASE is %0x\r\n",byte);
+//           printf("Data received in CUSTOM CASE is %0x\r\n",byte);
          }
          status = rsi_ble_set_local_att_value(ecg_char_val_handle, 67, data);
 
@@ -1211,53 +1174,37 @@ adv:
         }
       } break;
       case RSI_BLE_GATT_SEND_DATA_custom: {
-
-//              printf("reached custom case\r\n");
               if (connected == true) {
-//                  gpio_example_process_action();  // Only called here, once
-                if (notify_start == true) {
-                    custom_service_data_function((uint8_t *)data);
-                    //comment this block for continuous call of custom funciton
-                    // ======================================
-//                  if (attribute_handle == ecg_cccd_handle) {
-//                  uint16_t value = cccd_value;
-////                  printf("CCCD value is %d\r\n", cccd_value);
-//
-//                  if (value == 0x0001 && notify_start == true) {
-//                      notify_start = false;
-//
-//
-//                      // Trigger master once
-//                      gpio_example_process_action();  // Only called here, once
-//                      printf("Notifications enabled\r\n");
-//                      uint8_t byte = 0;
-//                      uint8_t ring_buff_size = ring_buffer_size();  // size is 0 here, why?
-//                      printf("ring_buff_size is %d\r\n", ring_buff_size);
-//
-//                       for (uint8_t i = 0; i < ring_buff_size; i++){
-//                           ring_buffer_get(&byte);
-//                           printf("Data received in CUSTOM CASE is %0x\r\n",byte);
-//                           }
-//
-//                  } else if (value == 0x0000) {
-//                      notify_start = false;
-//                      printf("Notifications disabled\r\n");
-//                  }
-                  // =========================
-
-
+                if (notify_start == true) { // && message_queue_available()) {
                   // local update of GATT table - works on apps like nrfCONNECT and SIconnect that continuously poll the server
-                  status = rsi_ble_set_local_att_value(ecg_char_val_handle, sizeof(uint8_t), (uint8_t *)data);
+                  status = message_queue_pop(notify_buf, &notify_len);
+                  if (status != RSI_SUCCESS) {
+                      printf("\n No message in queue = 0x%lX \r\n", status);
+                       }
+                  for (int i = 0; i < notify_len; i++)
+                    {
+                      printf("Data in queue is %02x\r\n", notify_buf[i]);
+                    }
+//                  printf("Updating GATT value with %d bytes\n", notify_len);
+//                  uint8_t test_data = rand() % 255;
+//                  uint16_t len = 1;
+
+                  int32_t status = rsi_ble_set_local_att_value(ecg_char_val_handle, notify_len, notify_buf);
 
                   // this should be for notifications
+
 //                  uint8_t *rsi_connected_dev_addr = str_remote_address;
-//                  rsi_ble_notify_value(rsi_connected_dev_addr,
+//                  status = rsi_ble_notify_value(rsi_connected_dev_addr,
 //                                                  ecg_char_val_handle,
-//                                                  2,
-//                                                  (uint8_t *)data);
+//                                                  len,
+//                                                  &test_data);
                   if (status != RSI_SUCCESS) {
-                    LOG_PRINT("\n Set Local att value cmd failed = 0x%lX \n", status);
-                  }
+                                      printf("\n NOTIFY_value API failed = 0x%lX \r\n", status);
+                                    }
+//                  if (status != RSI_SUCCESS) {
+//                    LOG_PRINT("\n Set Local att value cmd failed = 0x%lX \n", status);
+//                  }
+
                 }
               }
 
