@@ -55,7 +55,7 @@ spi_app_layer.o: ../spi_app_layer.c ../app.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
- ../spi_sync.h
+ ../spi_sync.h ../BLE_services.h
 ../app.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\extension\wiseconnect\components\device\silabs\si91x\mcu\drivers\unified_api\inc\sl_si91x_ssi.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
@@ -114,3 +114,4 @@ c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\service\sleep
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
 c:\users\florin.mota\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 ../spi_sync.h:
+../BLE_services.h:

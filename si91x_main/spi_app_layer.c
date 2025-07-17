@@ -13,6 +13,8 @@
 #include "sl_sleeptimer.h"
 #include "spi_sync.h"
 
+#include "BLE_services.h"
+
 static   void my_ssi_event_cb(uint32_t event);
 
 //uint8_t data_in[10] = {0xaa};
@@ -64,7 +66,7 @@ typedef struct {
 spi_comm_context_t spi_ctx;
 
 
-// ring buffer set
+// ring buffer functions
 void ring_buffer_put(uint8_t byte) {
     ring_buf[ring_head] = byte;
     ring_head = (ring_head + 1) % RING_BUF_SIZE;
@@ -76,6 +78,9 @@ bool ring_buffer_get(uint8_t *byte) {
     *byte = ring_buf[ring_tail];
     ring_tail = (ring_tail + 1) % RING_BUF_SIZE;
     return true;
+}
+size_t ring_buffer_size(void) {
+    return (RING_BUF_SIZE + ring_head - ring_tail) % RING_BUF_SIZE;
 }
 
 // callback handling
@@ -182,6 +187,8 @@ void process_frame(spi_frame_t *frame)
   for (uint8_t i = 0; i < frame->payload_length; i++){
       printf("Data received is %0x\r\n",data_buff[i]);
   }
+  uint8_t data_buff_for_ble[MAX_PAYLOAD_SIZE] = {0};
+  memcpy(data_buff_for_ble, &(frame->payload), frame->payload_length);
 }
 void spi_rx_handler(uint8_t rx_byte)
 {
@@ -231,8 +238,8 @@ void spi_rx_task()
         if (xSemaphoreTake(spi_rx_sem, portMAX_DELAY) == pdTRUE) {
             // Drain all received bytes
             while (ring_buffer_get(&byte)) {
-                spi_rx_handler(byte);  // your state machine
-//                printf("Function for handling  the state\r\n");
+                spi_rx_handler(byte);  // state machine
+                printf("Function for handling  the state with byte %02x\r\n", byte);
             }
         }
     }

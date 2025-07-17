@@ -23,6 +23,12 @@ void slave_application_data_ready(uint8_t* buffer, uint32_t length);
 void spi_rx_task();
 void spi_manual();
 
+// ring buffer
+void ring_buffer_put(uint8_t byte);
+bool ring_buffer_get(uint8_t *byte);
+size_t ring_buffer_size(void);
+
+
 extern uint8_t data_out[10];
 
 #endif /* SPI_APP_LAYER_H_ */
