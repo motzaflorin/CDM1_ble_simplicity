@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ble_on_re"/>
+		<item key="selection" value="ecg_char_val_handle"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="ble_on_re"/>
-			<item value="ble_on"/>
-			<item value="transfer com"/>
-			<item value="transfer"/>
-			<item value="trans"/>
-			<item value="clock divi"/>
-			<item value="data"/>
-			<item value="freq"/>
-			<item value="slave"/>
-			<item value="50"/>
-			<item value="but"/>
-			<item value="led"/>
-			<item value="event"/>
-			<item value="register"/>
-			<item value="sl_si91x_gspi_register_callback."/>
+			<item value="ecg_char_val_handle"/>
+			<item value="cccd_value"/>
+			<item value="rsi_ble_notify_value"/>
+			<item value="function"/>
+			<item value="RSI_BLE_GATT_SEND_DATA_custom"/>
+			<item value="str_remote_address"/>
+			<item value="custom_service"/>
+			<item value="app_ble_wri"/>
+			<item value="ecg_char"/>
+			<item value="app_ble_"/>
+			<item value="app_ble_write"/>
+			<item value="notify_va"/>
+			<item value="notify_vale"/>
+			<item value="data_func"/>
+			<item value="ring_buffer_size"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1175"/>
-		<item key="DIALOG_Y_ORIGIN" value="253"/>
-		<item key="DIALOG_WIDTH" value="414"/>
-		<item key="DIALOG_HEIGHT" value="454"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI"/>
+		<item key="DIALOG_X_ORIGIN" value="1058"/>
+		<item key="DIALOG_Y_ORIGIN" value="390"/>
+		<item key="DIALOG_WIDTH" value="318"/>
+		<item key="DIALOG_HEIGHT" value="327"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-21|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

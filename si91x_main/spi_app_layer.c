@@ -183,6 +183,7 @@ int validate_checksum(spi_frame_t *frame)
 }
 void process_frame(spi_frame_t *frame)
 {
+  printf("\r\n in message frame!\r\n\r\n");
   uint8_t data_buff[MAX_PAYLOAD_SIZE] = {0};
   memcpy(data_buff, &(frame->payload), frame->payload_length);
   for (uint8_t i = 0; i < frame->payload_length; i++){

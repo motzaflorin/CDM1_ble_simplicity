@@ -6349,3 +6349,2193 @@ java.lang.IllegalStateException: Device must be selected to execute Run session
 
 !ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-09 18:55:13.364
 !MESSAGE No network interfaces found.
+!SESSION 2025-07-10 15:41:39.150 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.3
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-10 15:41:43.398
+!MESSAGE Logging bundle not found: com.silabs.ss.logger, logging not initialized.
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-07-10 15:41:47.085
+!MESSAGE Jetty listening on: http://127.0.0.1:64870/
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-07-10 15:41:48.459
+!MESSAGE ContentServer started at: 127.0.0.1, 64870
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-07-10 15:41:48.682
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.descriptor.core 2 0 2025-07-10 15:41:51.983
+!MESSAGE re-registering property: com.silabs.ss.platform.api.descriptor.core.model.impl.MPropertyImpl@d6a929b (id: universalConfig.compSelProjInstanceId, name: compSelProjInstanceId, label: null, description: specific id for this instance of a project) (propertyScope: ) (id: universalConfig.compSelProjInstanceId, type: String, defaultValueLiteral: null)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-07-10 15:41:52.866
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@6905504 (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY com.silabs.ss.tool.installer.core 1 0 2025-07-10 15:42:12.382
+!MESSAGE isInternalNetwork: false
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2025-07-10 15:42:17.812
+!MESSAGE AdapterPack USB adapter pack has setupcheck function type 
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-07-10 15:44:16.462
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-07-10 15:44:16.483
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-10 15:44:35.367
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-07-10 15:44:42.942
+!MESSAGE Failed to parse assets.manifest file.  Exception: Read timed out
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1508)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1479)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:791)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:726)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1688)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.downloadFile(AssetService.java:1038)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.fetchAssetsFiles(AssetService.java:1183)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.fetchAssetsFiles(AssetService.java:1142)
+	at com.silabs.ss.platform.internal.api.content.core.asset.AssetService.checkForUpdates(AssetService.java:540)
+	at com.silabs.ss.platform.api.content.core.metadata.MetadataUtils$1.run(MetadataUtils.java:72)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-07-10 15:44:43.215
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@7211be72 (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-10 16:39:42.999
+!MESSAGE Indexed 'ble_heart_rate_profile_soc_2_2' (108 sources, 309 headers) in 9.15 sec: 40,700 declarations; 100,870 references; 0 unresolved inclusions; 224 syntax errors; 3 unresolved names (0.0021%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-07-10 16:41:29.168
+!MESSAGE Launch attempt in non existent working directory "C:\Users\florin.mota\SimplicityStudio\v5_workspace\ble_heart_rate_profile_soc_2_2\GNU ARM v12.2.1 - Default"
+!STACK 0
+java.lang.Exception
+	at org.eclipse.cdt.core.CCorePlugin.logStackTrace(CCorePlugin.java:1556)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:185)
+	at org.eclipse.cdt.core.CommandLauncherManager$CommandLauncherWrapper.execute(CommandLauncherManager.java:146)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:140)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performExternalClean(CommonBuilder.java:1170)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.clean(CommonBuilder.java:1111)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performCleanning(CommonBuilder.java:955)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:881)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:767)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:524)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-07-10 16:41:30.314
+!MESSAGE Launch attempt in non existent working directory "C:\Users\florin.mota\SimplicityStudio\v5_workspace\ble_heart_rate_profile_soc_2_2\GNU ARM v12.2.1 - Default"
+!STACK 0
+java.lang.Exception
+	at org.eclipse.cdt.core.CCorePlugin.logStackTrace(CCorePlugin.java:1556)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:185)
+	at org.eclipse.cdt.core.CommandLauncherManager$CommandLauncherWrapper.execute(CommandLauncherManager.java:146)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:274)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:140)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:73)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:774)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:524)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:466)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:517)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:413)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.platform.descriptor.core 4 0 2025-07-10 16:44:14.293
+!MESSAGE could not resolve type String
+
+!ENTRY com.silabs.ss.support.browser.html 4 0 2025-07-10 16:44:14.942
+!MESSAGE  Problem with request for 'studiofile://localhost//C:/Users/florin.mota/SimplicityStudio/v5_workspace/ble_heart_rate_profile_soc_3//resources/readme/heartrate_server_role.PNG'
+!STACK 0
+java.io.FileNotFoundException: C:\Users\florin.mota\SimplicityStudio\v5_workspace\ble_heart_rate_profile_soc_3\resources\readme\heartrate_server_role.PNG (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)
+	at java.base/java.net.URL.openStream(URL.java:1161)
+	at com.silabs.ss.support.browser.api.html.jxbrowser.JxBrowserService.interceptAndReadIcons(JxBrowserService.java:305)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:49)
+	at com.teamdev.jxbrowser.net.internal.InterceptRequestCallbackProxy.on(InterceptRequestCallbackProxy.java:32)
+	at com.teamdev.jxbrowser.internal.rpc.stream.CallbackStream.process(CallbackStream.java:181)
+	at com.teamdev.jxbrowser.internal.rpc.stream.Stream$StreamObserver.lambda$onNext$0(Stream.java:167)
+	at com.teamdev.jxbrowser.internal.RpcThreadImpl$TaskRunner.processTasks(RpcThreadImpl.java:172)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-10 16:44:21.652
+!MESSAGE Indexed 'ble_heart_rate_profile_soc_3' (108 sources, 310 headers) in 7.37 sec: 40,681 declarations; 100,738 references; 0 unresolved inclusions; 223 syntax errors; 3 unresolved names (0.0021%)
+
+!ENTRY org.eclipse.ui 4 4 2025-07-10 16:45:24.940
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI$1@6e97b0e7, thread Worker-20: Launching ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2025-07-10 16:45:24.940
+!MESSAGE Worker-20: Launching ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-20: Launching ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB
+	at java.management@17.0.3/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.3/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4779)
+	at com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI.selectDevice(DeviceSelectorUI.java:45)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector2.promptToChooseOneDevice(SLSLaunchDeviceSelector2.java:69)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector.selectOneDevice(SLSLaunchDeviceSelector.java:104)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:163)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:140)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.setUserDeviceSettingsInLaunchCfg(StudioGdbLaunchConfigurationDelegate.java:599)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.createGdbLaunch(StudioGdbLaunchConfigurationDelegate.java:180)
+	at org.eclipse.embedcdt.debug.gdbjtag.core.dsf.AbstractGnuMcuLaunchConfigurationDelegate.getLaunch(AbstractGnuMcuLaunchConfigurationDelegate.java:36)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:742)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2025-07-10 16:45:24.940
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.Semaphore.acquire(Semaphore.java:45)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:927)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:348)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:601)
+	at com.silabs.ss.support.hwtools.api.core.SDKWifiUtility.getWifiAdapterFirmwareFileVersion(SDKWifiUtility.java:267)
+	at com.silabs.ss.support.hwtools.api.core.SDKWifiUtility$$Lambda$4238/0x000000080248d898.toVersion(Unknown Source)
+	at com.silabs.ss.support.hwtools.api.core.SDKSEUtility.getLatestFirmwarePathVersion(SDKSEUtility.java:104)
+	at com.silabs.ss.support.hwtools.api.core.SDKWifiUtility.getLatestWifiPathVersion(SDKWifiUtility.java:280)
+	at com.silabs.ss.support.hwtools.api.core.SDKWifiUtility.getLatestWifiFirmwarePackage(SDKWifiUtility.java:74)
+	at com.silabs.ss.support.wifi.internal.core.WiFiPartUtils.getLatestFwVersion(WiFiPartUtils.java:95)
+	at com.silabs.ss.support.wifi.internal.core.WIFIPartValidator.getLatestFwVersion(WIFIPartValidator.java:42)
+	at com.silabs.ss.support.wifi.internal.core.WIFIPartValidator.accept(WIFIPartValidator.java:25)
+	at com.silabs.ss.platform.api.launcher.core.LauncherCoreUtils.isDeviceValidForContext(LauncherCoreUtils.java:74)
+	at com.silabs.ss.platform.api.launcher.core.LauncherCoreUtils.isDeviceValidForContext(LauncherCoreUtils.java:64)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector$DeviceStatusFilter.accept(SLSLaunchDeviceSelector.java:372)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector$DeviceStatusFilter.accept(SLSLaunchDeviceSelector.java:1)
+	at com.silabs.ss.platform.api.device.ui.DeviceValidationResults.createStatus(DeviceValidationResults.java:87)
+	at com.silabs.ss.platform.api.device.ui.DeviceValidationResults.getStatus(DeviceValidationResults.java:47)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog.getValidationStatus(DeviceSelectionDialog.java:249)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog$LocalDeviceComposite.isCompatible(DeviceSelectionDialog.java:339)
+	at com.silabs.ss.platform.internal.device.ui.DeviceSelectionLabelProvider.isCompatible(DeviceSelectionLabelProvider.java:36)
+	at com.silabs.ss.platform.internal.device.ui.DeviceSelectionLabelProvider.getForeground(DeviceSelectionLabelProvider.java:43)
+	at org.eclipse.jface.viewers.DecoratingLabelProvider.getForeground(DecoratingLabelProvider.java:285)
+	at org.eclipse.jface.viewers.TableColumnViewerLabelProvider.update(TableColumnViewerLabelProvider.java:76)
+	at org.eclipse.jface.viewers.TreeColumnViewerLabelProvider.update(TreeColumnViewerLabelProvider.java:1)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTableViewer.doUpdateItem(AbstractTableViewer.java:396)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil$$Lambda$101/0x0000000800d89c40.run(Unknown Source)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2109)
+	at org.eclipse.jface.viewers.AbstractTableViewer.createItem(AbstractTableViewer.java:288)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefreshAll(AbstractTableViewer.java:726)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefresh(AbstractTableViewer.java:618)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefresh(AbstractTableViewer.java:610)
+	at org.eclipse.jface.viewers.AbstractTableViewer.lambda$0(AbstractTableViewer.java:572)
+	at org.eclipse.jface.viewers.AbstractTableViewer$$Lambda$1902/0x0000000801c91f80.run(Unknown Source)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.AbstractTableViewer.inputChanged(AbstractTableViewer.java:572)
+	at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:282)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1632)
+	at com.silabs.ss.platform.api.device.ui.widget.BaseDeviceComposite.createUI(BaseDeviceComposite.java:105)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceComposite.<init>(DeviceComposite.java:43)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog$LocalDeviceComposite.<init>(DeviceSelectionDialog.java:306)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog.createDeviceComposite(DeviceSelectionDialog.java:257)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog.createDialogArea(DeviceSelectionDialog.java:174)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:767)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.jface.window.Window.open(Window.java:788)
+	at com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI$1.run(DeviceSelectorUI.java:51)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer$$Lambda$2859/0x0000000801c230a0.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.ui.internal.Workbench$$Lambda$139/0x0000000800daf5e0.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@17.0.3/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.3/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.3/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.3/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-10 16:45:47.544
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2785e043
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-10 16:45:47.587
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-10 16:57:35.978
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@1fb59a83
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-10 16:57:35.990
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-10 16:57:39.193
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-10 16:58:06.762
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@63a6a734
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-10 16:58:06.774
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-10 17:09:22.209
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@17441b74
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-10 17:09:22.217
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-11 11:41:34.724
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-11 11:41:38.959
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-11 11:41:39.349
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-11 11:44:15.705
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4b9c7e2b
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-11 11:44:15.716
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-11 11:44:18.867
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-11 11:44:32.452
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@43600f93
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-11 11:44:32.464
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-11 11:46:17.323
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@31eb6dbf
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-11 11:46:17.334
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-11 11:50:30.177
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@32fb3360
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-11 11:50:30.187
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-11 11:50:33.001
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-11 11:50:43.703
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@1770a3be
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-11 11:50:43.711
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-11 11:57:23.006
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3f9beff9
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-11 11:57:23.017
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-11 12:01:06.541
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-11 12:01:06.547
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-11 12:48:08.935
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-14 08:55:05.620
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 4 0 2025-07-14 09:00:14.844
+!MESSAGE Failed to select device in GDB step
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+	at com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI.selectDevice(DeviceSelectorUI.java:69)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector2.promptToChooseOneDevice(SLSLaunchDeviceSelector2.java:69)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector.selectOneDevice(SLSLaunchDeviceSelector.java:104)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:163)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:140)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.setUserDeviceSettingsInLaunchCfg(StudioGdbLaunchConfigurationDelegate.java:599)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.createGdbLaunch(StudioGdbLaunchConfigurationDelegate.java:180)
+	at org.eclipse.embedcdt.debug.gdbjtag.core.dsf.AbstractGnuMcuLaunchConfigurationDelegate.getLaunch(AbstractGnuMcuLaunchConfigurationDelegate.java:36)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:742)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 unknown 8 1 2025-07-14 09:00:14.844
+!MESSAGE 
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-07-14 09:00:14.852
+!MESSAGE An internal error occurred during: "Launching ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB".
+!STACK 0
+java.lang.IllegalStateException: Device must be selected to execute Run session
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.setDeviceIdentiferInLaunchCfg(StudioGdbLaunchConfigurationDelegate.java:412)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.createGdbLaunch(StudioGdbLaunchConfigurationDelegate.java:215)
+	at org.eclipse.embedcdt.debug.gdbjtag.core.dsf.AbstractGnuMcuLaunchConfigurationDelegate.getLaunch(AbstractGnuMcuLaunchConfigurationDelegate.java:36)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:742)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 09:00:49.862
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@415eba42
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 09:00:49.870
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 09:32:36.355
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@43207b8d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 09:32:36.364
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 09:38:39.330
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6cddd3ee
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 09:38:39.340
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 09:38:42.499
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 09:38:53.056
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@44d704f6
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 09:38:53.066
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 09:41:13.061
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3547433a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 09:41:13.071
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 09:41:15.676
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 09:41:30.655
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4717b5b6
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 09:41:30.663
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 09:52:59.107
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@279274e1
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 09:52:59.116
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 09:56:55.152
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@33bf3bdf
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 09:56:55.159
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:00:31.345
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@59396e25
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:00:31.355
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 10:00:33.990
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:00:48.727
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@e61d6db
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:00:48.736
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:02:59.383
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4500f358
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:02:59.394
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:19:58.387
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@23c9aae5
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:19:58.398
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:23:23.735
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5bea2cf0
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:23:23.746
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:28:02.377
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@387e8aab
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:28:02.385
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 10:28:05.517
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:28:16.570
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2dbddcac
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:28:16.578
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:30:06.969
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@476c0206
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:30:06.980
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:32:33.533
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2f550f59
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:32:33.542
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:45:53.161
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@56cfe4b4
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:45:53.170
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 10:45:55.705
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 10:46:06.566
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5f92e242
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 10:46:06.574
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 11:04:50.902
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@156b81e3
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 11:04:50.912
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 11:08:06.272
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@531c2698
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 11:08:06.281
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 11:13:59.039
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@767c7dcb
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 11:13:59.048
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 11:16:06.735
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@37fa8292
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 11:16:06.743
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 11:17:15.037
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@925c2f6
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 11:17:15.044
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 11:17:18.119
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 11:17:30.883
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@76133b9b
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 11:17:30.892
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 11:17:34.041
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 11:17:45.901
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@29da3b19
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 11:17:45.909
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 11:17:48.995
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 11:18:12.110
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6be6f657
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 11:18:12.119
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-14 11:31:20.662
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-14 11:31:20.759
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 12:58:57.010
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@44b3d185
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 12:58:57.017
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:37:43.906
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@bc2f504
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:37:43.941
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:40:42.391
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@1a2f03b0
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:40:42.400
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:42:41.617
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@13e0083e
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:42:41.626
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 13:42:44.147
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:42:54.656
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@158c7053
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:42:54.666
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:50:55.581
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4e7ada87
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:50:55.590
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 13:50:58.719
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:51:09.851
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5b8b0f5a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:51:09.862
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:52:51.447
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5a2748d9
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:52:51.456
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 13:52:54.575
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:53:08.104
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@71f5d04c
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:53:08.112
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:55:05.932
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2bd5befe
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:55:05.941
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:57:30.264
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@7b891b9a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:57:30.272
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 13:57:33.417
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 13:57:56.376
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4f62f097
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 13:57:56.385
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-14 15:20:52.525
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-14 15:20:52.533
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-14 16:35:51.975
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.apack.ip 4 0 2025-07-14 16:36:28.446
+!MESSAGE Discovery error: Failed to create server on 169.254.191.76:0.
+Maybe you have another copy of Simplicity Studio™ running?
+!STACK 0
+com.silabs.ss.platform.api.apack.ip.DiscoveryException: Failed to create server on 169.254.191.76:0.
+Maybe you have another copy of Simplicity Studio™ running?
+	at com.silabs.ss.platform.api.apack.ip.EthernetDiscovery.ensureThreads(EthernetDiscovery.java:172)
+	at com.silabs.ss.platform.api.apack.ip.EthernetDiscovery.locate(EthernetDiscovery.java:62)
+	at com.silabs.ss.platform.api.device.core.locator.DeviceLocatorJob.run(DeviceLocatorJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.BindException: Cannot assign requested address: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.DatagramChannelImpl.bindInternal(DatagramChannelImpl.java:1194)
+	at java.base/sun.nio.ch.DatagramChannelImpl.bind(DatagramChannelImpl.java:1164)
+	at java.base/sun.nio.ch.DatagramSocketAdaptor.bind(DatagramSocketAdaptor.java:107)
+	at java.base/java.net.DatagramSocket.createDelegate(DatagramSocket.java:1426)
+	at java.base/java.net.DatagramSocket.<init>(DatagramSocket.java:330)
+	at java.base/java.net.DatagramSocket.<init>(DatagramSocket.java:389)
+	at com.silabs.ss.platform.api.apack.ip.EthernetDiscovery.ensureThreads(EthernetDiscovery.java:159)
+	... 3 more
+
+!ENTRY com.silabs.ss.platform.apack.ip 4 0 2025-07-14 16:36:28.902
+!MESSAGE Discovery error: Failed to create server on 169.254.191.76:19020.
+Maybe you have another copy of Simplicity Studio™ running?
+!STACK 0
+com.silabs.ss.platform.api.apack.ip.DiscoveryException: Failed to create server on 169.254.191.76:19020.
+Maybe you have another copy of Simplicity Studio™ running?
+	at com.silabs.ss.platform.api.apack.ip.JLinkEthernetDiscovery.ensureThreads(JLinkEthernetDiscovery.java:62)
+	at com.silabs.ss.platform.api.apack.ip.EthernetDiscovery.locate(EthernetDiscovery.java:62)
+	at com.silabs.ss.platform.api.device.core.locator.DeviceLocatorJob.run(DeviceLocatorJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.BindException: Cannot assign requested address: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.DatagramChannelImpl.bindInternal(DatagramChannelImpl.java:1194)
+	at java.base/sun.nio.ch.DatagramChannelImpl.bind(DatagramChannelImpl.java:1164)
+	at java.base/sun.nio.ch.DatagramSocketAdaptor.bind(DatagramSocketAdaptor.java:107)
+	at java.base/java.net.DatagramSocket.createDelegate(DatagramSocket.java:1426)
+	at java.base/java.net.DatagramSocket.<init>(DatagramSocket.java:330)
+	at java.base/java.net.DatagramSocket.<init>(DatagramSocket.java:389)
+	at com.silabs.ss.platform.api.apack.ip.JLinkEthernetDiscovery.ensureThreads(JLinkEthernetDiscovery.java:49)
+	... 3 more
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 16:38:45.298
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5518bca9
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 16:38:45.312
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 16:42:22.226
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@50fcdae9
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 16:42:22.239
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 16:42:25.971
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 16:42:41.633
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@405d9a14
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 16:42:41.647
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.jetty.server 2 0 2025-07-14 16:44:40.831
+!MESSAGE Overlapping static resource URLs:
+/btconf
+/btconf
+
+!ENTRY com.silabs.ss.platform.jetty.server 4 0 2025-07-14 16:44:40.843
+!MESSAGE URL already registered: /btconf
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-07-14 16:45:39.073
+!MESSAGE Websocket on server side linked to /ws/postbuild/server/notifications
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 16:56:44.627
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@75d8752d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 16:56:44.641
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:12:55.977
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@bca5d8b
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:12:55.998
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:16:50.133
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2a8a0994
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:16:50.147
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:21:38.564
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@dcad713
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:21:38.578
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:22:48.722
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6a35d187
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:22:48.738
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:29:38.884
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3b96d7e2
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:29:38.897
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:31:11.246
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3005203
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:31:11.262
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 17:31:14.876
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:31:29.711
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@205f70b6
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:31:29.725
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:43:26.386
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5ee976c2
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:43:26.399
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.cdt.ui 4 0 2025-07-14 17:44:53.867
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element app.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2025-07-14 17:44:53.867
+!MESSAGE Element app.c does not exist.
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:45:21.275
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6c11db37
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:45:21.291
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:52:45.784
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2c7a7d2f
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:52:45.799
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 17:59:50.852
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@611c3e8a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 17:59:50.928
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 17:59:56.402
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:00:13.447
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@69f7d876
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:00:13.468
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:02:38.444
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@1d2c72c0
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:02:38.517
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 18:02:43.552
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:04:31.479
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@25339a40
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:04:31.494
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:21:06.647
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6d4a6908
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:21:06.668
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 18:21:12.572
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:21:29.155
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@672c012f
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:21:29.170
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:30:35.959
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@81223d7
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:30:35.977
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 18:30:39.617
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:30:54.776
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@335c1e59
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:30:54.789
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:38:52.338
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@38d9e875
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:38:52.352
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:48:50.003
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6a209559
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:48:50.017
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 18:59:48.240
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@438278b3
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 18:59:48.255
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:12:42.256
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4d5c399f
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:12:42.271
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-14 19:18:58.580
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:19:14.829
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@79d2ceeb
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:19:14.840
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:24:17.148
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@464ada87
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:24:17.166
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 19:24:20.726
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:24:37.160
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@42793a59
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:24:37.182
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:31:17.841
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6013b8a2
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:31:17.850
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 19:31:20.964
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:31:32.103
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4af4c572
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:31:32.111
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.tcf 4 0 2025-07-14 19:35:17.544
+!MESSAGE Cannot send datagram packet to /192.168.1.255
+!STACK 0
+java.net.NoRouteToHostException: No route to host: no further information
+	at java.base/sun.nio.ch.DatagramChannelImpl.send0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.sendFromNativeBuffer(DatagramChannelImpl.java:901)
+	at java.base/sun.nio.ch.DatagramChannelImpl.send(DatagramChannelImpl.java:863)
+	at java.base/sun.nio.ch.DatagramChannelImpl.send(DatagramChannelImpl.java:821)
+	at java.base/sun.nio.ch.DatagramChannelImpl.blockingSend(DatagramChannelImpl.java:853)
+	at java.base/sun.nio.ch.DatagramSocketAdaptor.send(DatagramSocketAdaptor.java:218)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:664)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:964)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendEmptyPacket(LocatorService.java:1101)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendAll(LocatorService.java:1118)
+	at org.eclipse.tcf.internal.services.local.LocatorService.refresh_timer(LocatorService.java:714)
+	at org.eclipse.tcf.internal.services.local.LocatorService.access$1(LocatorService.java:665)
+	at org.eclipse.tcf.internal.services.local.LocatorService$1$1.run(LocatorService.java:232)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:97)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-14 19:35:40.910
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-14 19:35:40.936
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:36:13.517
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5992510d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:36:13.526
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 19:36:16.651
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:36:27.903
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@1744ab50
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:36:27.910
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:37:20.704
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@add7a89
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:37:20.714
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:46:01.055
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2884f4c3
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:46:01.064
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 19:46:04.205
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:46:17.836
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2bf2e666
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:46:17.845
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 19:54:04.324
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4a409917
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 19:54:04.332
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 20:14:27.438
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4f08d17
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 20:14:27.446
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 20:14:30.578
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 20:14:41.934
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@28d14122
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 20:14:41.942
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 20:15:38.199
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4b76e27d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 20:15:38.209
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.support.mcu.part.core 4 0 2025-07-14 20:15:41.361
+!MESSAGE Could not connect debugger. Could not connect to target device
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-14 20:15:51.751
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@1d2ac168
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-14 20:15:51.759
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+!SESSION 2025-07-15 10:37:12.938 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.3
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-15 10:37:14.982
+!MESSAGE Logging bundle not found: com.silabs.ss.logger, logging not initialized.
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-07-15 10:37:16.702
+!MESSAGE Jetty listening on: http://127.0.0.1:58009/
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-07-15 10:37:17.376
+!MESSAGE ContentServer started at: 127.0.0.1, 58009
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-07-15 10:37:17.443
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.descriptor.core 2 0 2025-07-15 10:37:19.548
+!MESSAGE re-registering property: com.silabs.ss.platform.api.descriptor.core.model.impl.MPropertyImpl@d6a929b (id: universalConfig.compSelProjInstanceId, name: compSelProjInstanceId, label: null, description: specific id for this instance of a project) (propertyScope: ) (id: universalConfig.compSelProjInstanceId, type: String, defaultValueLiteral: null)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-07-15 10:37:20.098
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@129c8a4 (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY com.silabs.ss.tool.installer.core 1 0 2025-07-15 10:37:33.656
+!MESSAGE isInternalNetwork: false
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2025-07-15 10:37:36.029
+!MESSAGE AdapterPack USB adapter pack has setupcheck function type 
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-15 10:37:46.984
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-07-15 10:39:08.252
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@13f51f94 (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-07-15 10:39:09.075
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-07-15 10:39:09.102
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.tool.installer.core.ui 4 0 2025-07-15 10:39:12.213
+!MESSAGE OperationCanceledException
+!STACK 0
+org.eclipse.core.runtime.OperationCanceledException
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.query(AbstractRepositoryManager.java:1178)
+	at com.silabs.ss.tool.internal.api.installer.core.InstallerUtils.findFeaturesForCapabilities(InstallerUtils.java:668)
+	at com.silabs.ss.tool.internal.api.installer.core.InstallerUtils.scanFeaturesProvidingMetadata(InstallerUtils.java:425)
+	at com.silabs.ss.tool.internal.api.installer.core.InstallerUtils.getPackageProvidingMetadata(InstallerUtils.java:443)
+	at com.silabs.ss.tool.internal.installer.core.PackageService.loadRemotePackages(PackageService.java:825)
+	at com.silabs.ss.tool.internal.installer.core.PackageService.getAllAvailablePackages(PackageService.java:151)
+	at com.silabs.ss.tool.internal.installer.core.PackageService.checkForUpdates(PackageService.java:330)
+	at com.silabs.ss.tool.internal.api.installer.core.ui.UpdatesAvailableDialog$5.run(UpdatesAvailableDialog.java:237)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-15 10:46:38.454
+!MESSAGE Indexed 'si91x_main' (70 sources, 217 headers) in 6.76 sec: 26,188 declarations; 70,335 references; 0 unresolved inclusions; 150 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 10:51:11.509
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@42f06b35
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 10:51:11.544
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 11:14:17.429
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(ble_heart_rate_profile_soc_3 GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@42bb4d5b
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 11:14:17.438
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.descriptor.core 4 0 2025-07-15 11:26:11.958
+!MESSAGE could not resolve type String
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 11:43:49.929
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4a68dc75
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 11:43:49.937
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-15 11:48:08.175
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-15 11:48:08.195
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-15 11:49:40.155
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-15 11:49:40.172
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-15 12:11:53.016
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 13:10:08.236
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6decb816
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 13:10:08.248
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-15 13:58:05.808
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-15 13:58:05.814
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 14:15:48.014
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@43b9055c
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 14:15:48.024
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 14:26:20.413
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5f3b5bd0
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 14:26:20.422
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 14:36:27.600
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@21414bf4
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 14:36:27.608
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 14:48:00.579
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@635998e4
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 14:48:00.590
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 14:51:12.152
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6e8c9db5
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 14:51:12.162
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 15:02:13.798
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4b25e360
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 15:02:13.808
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 15:03:37.322
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3cb6054e
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 15:03:37.332
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 15:05:09.181
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@332d9ff2
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 15:05:09.190
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 15:13:25.243
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3a71b3b3
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 15:13:25.252
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 15:15:04.850
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@51e5192e
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 15:15:04.859
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 15:21:27.423
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@55832e5a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 15:21:27.432
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-15 15:22:49.155
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@b049470
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-15 15:22:49.165
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-15 15:33:20.236
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-15 15:33:20.330
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-15 16:41:28.189
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-15 17:59:15.668
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-16 09:44:03.335
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-16 09:44:03.468
+!MESSAGE No network interfaces found.
+
+!ENTRY org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@70b85381,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@70b85381,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@70635ed9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@70635ed9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Searches for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77f6f306,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Searches for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77f6f306,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Opens the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ad9eab2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Opens the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ad9eab2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78cf9c33,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78cf9c33,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12b09065,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Renames the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12b09065,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@521e2ff6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@521e2ff6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5717d37d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Opens an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5717d37d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-07-16 10:36:29.312
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@533de3a8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@533de3a8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-16 10:51:11.973
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 10:52:49.805
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@75aa3737
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 10:52:49.816
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 11:17:05.789
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@121d3e86
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 11:17:05.799
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 11:34:37.218
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@77dd3f70
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 11:34:37.226
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-16 11:37:02.581
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-16 11:37:02.611
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 13:51:02.281
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4267f82
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 13:51:02.290
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 14:25:14.088
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@56338ca5
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 14:25:14.099
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 14:27:14.419
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@c913749
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 14:27:14.430
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 14:29:50.831
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@21664e52
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 14:29:50.840
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 14:32:16.787
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@50dbb113
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 14:32:16.796
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 14:37:40.138
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6240236
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 14:37:40.148
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 14:39:26.737
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4874a602
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 14:39:26.787
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 14:51:07.067
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@635e3c2a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 14:51:07.078
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 14:53:06.066
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@607e6fa3
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 14:53:06.078
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 15:14:43.178
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3aa33fa5
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 15:14:43.191
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 15:16:15.873
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@fba3286
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 15:16:15.884
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-16 15:18:02.863
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@168c289d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-16 15:18:02.873
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-17 13:04:39.650
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-17 13:04:39.691
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-17 13:26:52.333
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-17 13:26:52.371
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-17 13:42:04.549
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 13:45:06.485
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6afefe8d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 13:45:06.494
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 13:51:03.122
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@31075fdd
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 13:51:03.132
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-17 13:55:27.175
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-17 13:55:27.200
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-17 15:20:39.304
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 15:23:58.509
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@65e526d5
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 15:23:58.520
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 15:26:20.303
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3338b0e6
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 15:26:20.313
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 15:32:34.088
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@33c5eba7
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 15:32:34.099
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 16:07:45.830
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5e409162
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 16:07:45.841
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 16:16:05.166
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@72048ed4
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 16:16:05.180
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-17 16:38:39.109
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-17 16:38:39.116
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-17 22:04:20.872
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 22:29:04.400
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@7c4ab620
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 22:29:04.416
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:00:39.744
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@61c98c52
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:00:39.758
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:07:16.562
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6b3a869e
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:07:16.576
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:10:01.363
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@268a132a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:10:01.383
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:16:23.936
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@41990351
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:16:23.953
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:21:31.935
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5d7c53d4
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:21:31.950
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:29:07.900
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@49555777
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:29:07.915
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:31:04.980
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@256f84c1
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:31:04.997
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:34:34.753
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@7226c77c
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:34:34.769
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 4 0 2025-07-17 23:46:59.422
+!MESSAGE Failed to select device in GDB step
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+	at com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI.selectDevice(DeviceSelectorUI.java:69)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector2.promptToChooseOneDevice(SLSLaunchDeviceSelector2.java:69)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector.selectOneDevice(SLSLaunchDeviceSelector.java:104)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:163)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:140)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.setUserDeviceSettingsInLaunchCfg(StudioGdbLaunchConfigurationDelegate.java:599)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.createGdbLaunch(StudioGdbLaunchConfigurationDelegate.java:180)
+	at org.eclipse.embedcdt.debug.gdbjtag.core.dsf.AbstractGnuMcuLaunchConfigurationDelegate.getLaunch(AbstractGnuMcuLaunchConfigurationDelegate.java:36)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:742)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 unknown 8 1 2025-07-17 23:46:59.423
+!MESSAGE 
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-07-17 23:46:59.439
+!MESSAGE An internal error occurred during: "Launching si91x_main GNU ARM v12.2.1 - Default GDB".
+!STACK 0
+java.lang.IllegalStateException: Device must be selected to execute Run session
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.setDeviceIdentiferInLaunchCfg(StudioGdbLaunchConfigurationDelegate.java:412)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.createGdbLaunch(StudioGdbLaunchConfigurationDelegate.java:215)
+	at org.eclipse.embedcdt.debug.gdbjtag.core.dsf.AbstractGnuMcuLaunchConfigurationDelegate.getLaunch(AbstractGnuMcuLaunchConfigurationDelegate.java:36)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:742)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:47:24.432
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4da34c95
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:47:24.447
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:47:46.104
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2d20fb5b
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:47:46.122
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-17 23:59:24.499
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3415b972
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-17 23:59:24.514
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:02:10.874
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@5a29f90
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:02:10.889
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:03:59.434
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@53baf0eb
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:03:59.448
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:05:55.182
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6285d580
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:05:55.201
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:07:18.885
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2e9f6af8
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:07:18.900
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:08:36.266
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@779b529a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:08:36.282
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:13:06.353
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@59fd3986
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:13:06.372
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:16:00.454
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@49783651
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:16:00.470
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 4 0 2025-07-18 00:18:46.781
+!MESSAGE Failed to select device in GDB step
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+	at com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI.selectDevice(DeviceSelectorUI.java:69)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector2.promptToChooseOneDevice(SLSLaunchDeviceSelector2.java:69)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector.selectOneDevice(SLSLaunchDeviceSelector.java:104)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:163)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:140)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.setUserDeviceSettingsInLaunchCfg(StudioGdbLaunchConfigurationDelegate.java:599)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.createGdbLaunch(StudioGdbLaunchConfigurationDelegate.java:180)
+	at org.eclipse.embedcdt.debug.gdbjtag.core.dsf.AbstractGnuMcuLaunchConfigurationDelegate.getLaunch(AbstractGnuMcuLaunchConfigurationDelegate.java:36)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:742)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 unknown 8 1 2025-07-18 00:18:46.781
+!MESSAGE 
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-07-18 00:18:46.799
+!MESSAGE An internal error occurred during: "Launching si91x_main GNU ARM v12.2.1 - Default GDB".
+!STACK 0
+java.lang.IllegalStateException: Device must be selected to execute Run session
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.setDeviceIdentiferInLaunchCfg(StudioGdbLaunchConfigurationDelegate.java:412)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.createGdbLaunch(StudioGdbLaunchConfigurationDelegate.java:215)
+	at org.eclipse.embedcdt.debug.gdbjtag.core.dsf.AbstractGnuMcuLaunchConfigurationDelegate.getLaunch(AbstractGnuMcuLaunchConfigurationDelegate.java:36)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:742)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:21:40.179
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3e9c55b4
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:21:40.198
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:24:49.777
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@62522b2a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:24:49.790
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:34:19.793
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3ef3e058
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:34:19.809
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:37:17.655
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3b6cfba2
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:37:17.671
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:40:04.473
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@4ab50347
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:40:04.486
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:42:37.515
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6fe2b2aa
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:42:37.530
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:43:35.271
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@59098167
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:43:35.286
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:44:46.516
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@41740717
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:44:46.530
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-18 00:45:58.711
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@28517881
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-18 00:45:58.727
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+!SESSION 2025-07-21 11:31:53.355 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.3
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-21 11:31:55.342
+!MESSAGE Logging bundle not found: com.silabs.ss.logger, logging not initialized.
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-07-21 11:31:57.159
+!MESSAGE Jetty listening on: http://127.0.0.1:53710/
+
+!ENTRY com.silabs.ss.platform.jetty.server 1 0 2025-07-21 11:31:57.783
+!MESSAGE ContentServer started at: 127.0.0.1, 53710
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2025-07-21 11:31:57.848
+!MESSAGE com.silabs.ss.tool.launcher.product found! Writing main studio shared file
+
+!ENTRY com.silabs.ss.platform.descriptor.core 2 0 2025-07-21 11:31:59.929
+!MESSAGE re-registering property: com.silabs.ss.platform.api.descriptor.core.model.impl.MPropertyImpl@d6a929b (id: universalConfig.compSelProjInstanceId, name: compSelProjInstanceId, label: null, description: specific id for this instance of a project) (propertyScope: ) (id: universalConfig.compSelProjInstanceId, type: String, defaultValueLiteral: null)
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-07-21 11:32:00.349
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@cf82bd9 (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY com.silabs.ss.tool.installer.core 1 0 2025-07-21 11:32:13.543
+!MESSAGE isInternalNetwork: false
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2025-07-21 11:32:15.876
+!MESSAGE AdapterPack USB adapter pack has setupcheck function type 
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-21 11:32:16.493
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2025-07-21 11:33:27.096
+!MESSAGE Asset Loading Errors:
+Asset com.silabs.ss.platform.internal.content.core.asset.model.impl.AssetImpl@3041df9d (version: null, changelog: null, path: /aem/www.silabs.com/documents/public/data-sheets/siwx917-ncp-datasheet.pdf, diskSizeKB: 0.0, downloadSizeKB: 0.0, directory: false, category: null, label: null, description: null, priority: 0, keywords: null) is missing required properties.  Ignoring...
+
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-07-21 11:33:37.462
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY com.silabs.ss.tool.installer.core 2 0 2025-07-21 11:33:37.484
+!MESSAGE Problem getting package resources: changelog
+
+!ENTRY org.eclipse.ui 4 4 2025-07-21 12:19:55.772
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI$1@3abf56eb, thread Worker-32: Launching si91x_main GNU ARM v12.2.1 - Default GDB will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2025-07-21 12:19:55.772
+!MESSAGE Worker-32: Launching si91x_main GNU ARM v12.2.1 - Default GDB thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-32: Launching si91x_main GNU ARM v12.2.1 - Default GDB
+	at java.management@17.0.3/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.3/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4779)
+	at com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI.selectDevice(DeviceSelectorUI.java:45)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector2.promptToChooseOneDevice(SLSLaunchDeviceSelector2.java:69)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector.selectOneDevice(SLSLaunchDeviceSelector.java:104)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:163)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchStepsUtils.selectDevice(SLSLaunchStepsUtils.java:140)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.setUserDeviceSettingsInLaunchCfg(StudioGdbLaunchConfigurationDelegate.java:599)
+	at com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate.createGdbLaunch(StudioGdbLaunchConfigurationDelegate.java:180)
+	at org.eclipse.embedcdt.debug.gdbjtag.core.dsf.AbstractGnuMcuLaunchConfigurationDelegate.getLaunch(AbstractGnuMcuLaunchConfigurationDelegate.java:36)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:742)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2025-07-21 12:19:55.773
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.Semaphore.acquire(Semaphore.java:45)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:927)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:348)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:601)
+	at com.silabs.ss.support.hwtools.api.core.SDKWifiUtility.getWifiAdapterFirmwareFileVersion(SDKWifiUtility.java:267)
+	at com.silabs.ss.support.hwtools.api.core.SDKWifiUtility$$Lambda$2001/0x0000000801d25898.toVersion(Unknown Source)
+	at com.silabs.ss.support.hwtools.api.core.SDKSEUtility.getLatestFirmwarePathVersion(SDKSEUtility.java:104)
+	at com.silabs.ss.support.hwtools.api.core.SDKWifiUtility.getLatestWifiPathVersion(SDKWifiUtility.java:280)
+	at com.silabs.ss.support.hwtools.api.core.SDKWifiUtility.getLatestWifiFirmwarePackage(SDKWifiUtility.java:74)
+	at com.silabs.ss.support.wifi.internal.core.WiFiPartUtils.getLatestFwVersion(WiFiPartUtils.java:95)
+	at com.silabs.ss.support.wifi.internal.core.WIFIPartValidator.getLatestFwVersion(WIFIPartValidator.java:42)
+	at com.silabs.ss.support.wifi.internal.core.WIFIPartValidator.accept(WIFIPartValidator.java:25)
+	at com.silabs.ss.platform.api.launcher.core.LauncherCoreUtils.isDeviceValidForContext(LauncherCoreUtils.java:74)
+	at com.silabs.ss.platform.api.launcher.core.LauncherCoreUtils.isDeviceValidForContext(LauncherCoreUtils.java:64)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector$DeviceStatusFilter.accept(SLSLaunchDeviceSelector.java:372)
+	at com.silabs.ss.framework.debugger.api.core.SLSLaunchDeviceSelector$DeviceStatusFilter.accept(SLSLaunchDeviceSelector.java:1)
+	at com.silabs.ss.platform.api.device.ui.DeviceValidationResults.createStatus(DeviceValidationResults.java:87)
+	at com.silabs.ss.platform.api.device.ui.DeviceValidationResults.getStatus(DeviceValidationResults.java:47)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog.getValidationStatus(DeviceSelectionDialog.java:249)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog$LocalDeviceComposite.isCompatible(DeviceSelectionDialog.java:339)
+	at com.silabs.ss.platform.internal.device.ui.DeviceSelectionLabelProvider.isCompatible(DeviceSelectionLabelProvider.java:36)
+	at com.silabs.ss.platform.internal.device.ui.DeviceSelectionLabelProvider.getForeground(DeviceSelectionLabelProvider.java:43)
+	at org.eclipse.jface.viewers.DecoratingLabelProvider.getForeground(DecoratingLabelProvider.java:285)
+	at org.eclipse.jface.viewers.TableColumnViewerLabelProvider.update(TableColumnViewerLabelProvider.java:76)
+	at org.eclipse.jface.viewers.TreeColumnViewerLabelProvider.update(TreeColumnViewerLabelProvider.java:1)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTableViewer.doUpdateItem(AbstractTableViewer.java:396)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil$$Lambda$101/0x0000000800d89c40.run(Unknown Source)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2109)
+	at org.eclipse.jface.viewers.AbstractTableViewer.createItem(AbstractTableViewer.java:288)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefreshAll(AbstractTableViewer.java:726)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefresh(AbstractTableViewer.java:618)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefresh(AbstractTableViewer.java:610)
+	at org.eclipse.jface.viewers.AbstractTableViewer.lambda$0(AbstractTableViewer.java:572)
+	at org.eclipse.jface.viewers.AbstractTableViewer$$Lambda$1996/0x0000000801cf34a0.run(Unknown Source)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.AbstractTableViewer.inputChanged(AbstractTableViewer.java:572)
+	at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:282)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1632)
+	at com.silabs.ss.platform.api.device.ui.widget.BaseDeviceComposite.createUI(BaseDeviceComposite.java:105)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceComposite.<init>(DeviceComposite.java:43)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog$LocalDeviceComposite.<init>(DeviceSelectionDialog.java:306)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog.createDeviceComposite(DeviceSelectionDialog.java:257)
+	at com.silabs.ss.platform.api.device.ui.widget.DeviceSelectionDialog.createDialogArea(DeviceSelectionDialog.java:174)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:767)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.jface.window.Window.open(Window.java:788)
+	at com.silabs.ss.framework.debugger.internal.ui.DeviceSelectorUI$1.run(DeviceSelectorUI.java:51)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer$$Lambda$1990/0x0000000801cc4930.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:647)
+	at org.eclipse.ui.internal.Workbench$$Lambda$139/0x0000000800dafca0.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:554)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at com.silabs.ss.tool.launcher.internal.product.StudioV5Application.start(StudioV5Application.java:28)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@17.0.3/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.3/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.3/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.3/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 12:20:05.419
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@66a537e5
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 12:20:05.454
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 12:51:04.084
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@78315ee9
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 12:51:04.102
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 13:30:45.518
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@78ec1e83
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 13:30:45.534
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 13:44:38.682
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@741b69d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 13:44:38.700
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 13:45:55.723
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@596758c1
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 13:45:55.739
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 13:54:50.859
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@335c8532
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 13:54:50.871
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 13:59:51.056
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3eccacea
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 13:59:51.073
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 14:01:01.793
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3cff3fc6
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 14:01:01.809
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 14:05:43.691
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@66ccf561
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 14:05:43.706
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 14:14:47.152
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@53c7fdd7
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 14:14:47.165
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 14:16:04.107
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@50727459
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 14:16:04.120
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 14:19:54.838
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@61146bae
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 14:19:54.851
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-21 14:54:49.253
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-21 15:22:21.299
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2025-07-21 15:22:21.307
+!MESSAGE No network interfaces found.
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:01:54.851
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@54ed096c
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:01:54.860
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:06:25.270
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@65c72842
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:06:25.283
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:07:30.222
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@21c4429c
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:07:30.236
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:09:06.771
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@6714f948
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:09:06.783
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:09:51.599
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@e22649f
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:09:51.614
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:10:43.138
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@ac7298b
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:10:43.152
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:12:14.603
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@7788f975
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:12:14.614
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:13:19.783
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@13669cfe
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:13:19.796
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:14:17.706
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@516ee75d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:14:17.720
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:14:56.633
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@3b44d68d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:14:56.646
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 16:26:29.731
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@67ea083a
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 16:26:29.742
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-21 18:08:02.089
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2025-07-21 18:39:52.681
+!MESSAGE Invalid discovery key: null
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 18:46:30.458
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@1a8be1a7
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 18:46:30.469
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 18:47:27.418
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2ff66bad
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 18:47:27.427
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 18:54:52.268
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@52800d6d
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 18:54:52.277
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx
+
+!ENTRY com.silabs.ss.tool.ide.arm.debug 1 0 2025-07-21 18:55:55.495
+!MESSAGE jlink.LaunchConfigurationDelegate.newServiceFactory(si91x_main GNU ARM v12.2.1 - Default GDB,10.2.90.20210621,run) com.silabs.ss.tool.ide.arm.api.debug.gdb.StudioGdbLaunchConfigurationDelegate@2add0ca2
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.jlink.core 4 1 2025-07-21 18:55:55.505
+!MESSAGE C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\exx32\arm-none-eabi-gdb.exe --interpreter=mi2 --nx

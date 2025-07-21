@@ -1181,15 +1181,24 @@ adv:
                   if (status != RSI_SUCCESS) {
                       printf("\n No message in queue = 0x%lX \r\n", status);
                        }
+                  uint16_t len = 1;
+                  uint8_t test_data = 0;
                   for (int i = 0; i < notify_len; i++)
                     {
+//                      status = rsi_ble_set_local_att_value(ecg_char_val_handle, len, &(notify_buf[i]));
                       printf("Data in queue is %02x\r\n", notify_buf[i]);
+
+                      test_data = notify_buf[i];
+                      osDelay(200);
+                      rsi_ble_set_local_att_value(ecg_char_val_handle, len, &test_data);
+
+
                     }
 //                  printf("Updating GATT value with %d bytes\n", notify_len);
 //                  uint8_t test_data = rand() % 255;
 //                  uint16_t len = 1;
 
-                  int32_t status = rsi_ble_set_local_att_value(ecg_char_val_handle, notify_len, notify_buf);
+                   status = rsi_ble_set_local_att_value(ecg_char_val_handle, len, &test_data);
 
                   // this should be for notifications
 
