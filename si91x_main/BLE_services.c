@@ -970,6 +970,8 @@ void check_wakeup_source()
  * @section description
  * This function is used to test the simple chat application.
  */
+static uint8_t ble_reader_index = 0;
+
 void ble_heart_rate_gatt_server(void *argument)
 {
   UNUSED_PARAMETER(argument);
@@ -1145,19 +1147,6 @@ adv:
         //! event invokes when write/notification events received
         //! clear the served event
          printf("RSI_BLE_GATT_WRITE_EVENT happend\r\n");
-         uint8_t byte = 0;
-         uint8_t data[67] = {0};
-         uint8_t ring_buff_size = ring_buffer_size();  // size is 0 here, why?
-//         printf("ring_buff_size is %d\r\n", ring_buff_size);
-
-
-         for (uint8_t i = 0; i < ring_buff_size; i++){
-           ring_buffer_get(&byte);
-           data[i] = byte;
-//           printf("Data received in CUSTOM CASE is %0x\r\n",byte);
-         }
-         status = rsi_ble_set_local_att_value(ecg_char_val_handle, 67, data);
-
         rsi_ble_app_clear_event(RSI_BLE_GATT_WRITE_EVENT);
 
       } break;
@@ -1175,30 +1164,32 @@ adv:
       } break;
       case RSI_BLE_GATT_SEND_DATA_custom: {
               if (connected == true) {
-                if (notify_start == true) { // && message_queue_available()) {
+                if (notify_start == true) {
                   // local update of GATT table - works on apps like nrfCONNECT and SIconnect that continuously poll the server
-                  status = message_queue_pop(notify_buf, &notify_len);
+//                  status = message_queue_pop(notify_buf, &notify_len);
                   if (status != RSI_SUCCESS) {
                       printf("\n No message in queue = 0x%lX \r\n", status);
                        }
-                  uint16_t len = 1;
-                  uint8_t test_data = 0;
-                  for (int i = 0; i < notify_len; i++)
-                    {
-//                      status = rsi_ble_set_local_att_value(ecg_char_val_handle, len, &(notify_buf[i]));
-                      printf("Data in queue is %02x\r\n", notify_buf[i]);
+                  uint8_t len = 1;
+                  uint8_t test_data[10];
+                  uint8_t data = 0;
+//                  for (int i = 0; i < notify_len; i++)
+                  if (message_queue_pop(&ble_reader_index, test_data, &len)) {
+                      for (int i = 0; i < len; i++)
 
-                      test_data = notify_buf[i];
+                    {
+
+//                      status = rsi_ble_set_local_att_value(ecg_char_val_handle, len, &(notify_buf[i]));
+                      printf("Data in queue is %02x\r\n", test_data[i]);
+
+                      data = test_data[i];
                       osDelay(200);
-                      rsi_ble_set_local_att_value(ecg_char_val_handle, len, &test_data);
+                      rsi_ble_set_local_att_value(ecg_char_val_handle, 1, &data);
 
 
                     }
-//                  printf("Updating GATT value with %d bytes\n", notify_len);
-//                  uint8_t test_data = rand() % 255;
-//                  uint16_t len = 1;
-
-                   status = rsi_ble_set_local_att_value(ecg_char_val_handle, len, &test_data);
+                  }
+//                   status = rsi_ble_set_local_att_value(ecg_char_val_handle, len, &data);
 
                   // this should be for notifications
 
@@ -1210,9 +1201,6 @@ adv:
                   if (status != RSI_SUCCESS) {
                                       printf("\n NOTIFY_value API failed = 0x%lX \r\n", status);
                                     }
-//                  if (status != RSI_SUCCESS) {
-//                    LOG_PRINT("\n Set Local att value cmd failed = 0x%lX \n", status);
-//                  }
 
                 }
               }

@@ -38,16 +38,18 @@ bool message_queue_push(const uint8_t *data, uint8_t len)
     return true;
 }
 
-bool message_queue_pop(uint8_t *out_data, uint8_t *out_len)
+bool message_queue_pop(uint8_t *subscriber_index, uint8_t *out_data, uint8_t *out_len)
 {
-    if (head == tail) {
-//        printf(" Q empty ? \r\n");
-        return false; // Queue empty
-    }
+//  printf("Sub_index is %d, and head is %d\r\n",*subscriber_index, head);
+  if (*subscriber_index == head) {
+          // Subscriber is up-to-date
+          return false;
+      }
 
-    memcpy(out_data, msg_queue[tail].data, msg_queue[tail].length);
-    *out_len = msg_queue[tail].length;
-    tail = (tail + 1) % MESSAGE_QUEUE_SIZE;
+    memcpy(out_data, msg_queue[*subscriber_index].data, msg_queue[*subscriber_index].length);
+    *out_len = msg_queue[*subscriber_index].length;
+
+    *subscriber_index = (*subscriber_index + 1) % MESSAGE_QUEUE_SIZE;
     return true;
 }
 
